@@ -1,0 +1,406 @@
+Appendix/Amendment    https://en.wikipedia.org/wiki/List_of_software_development_philosophies
+
+Information security
+====================
+	1- Integrity       (یکپارچگی (در ساخت) استحکام، انسجام)
+	2- Availability    
+	3- Confidentiality  
+	
+	
+CAP & PACELC theorem
+====================
+	1- Consistency         : Every read receives the most recent write or an error.   (ثبات یکپارچگی، انسجام)(هماهنگی، سازگاری)
+	2- Availability        : Every request receives a (non-error) response, without the guarantee that it contains the most recent write or data.
+	3- Partition tolerance : The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes.
+							 Partition tolerance refers to the tolerance of a storage system to failure of a network partition. Even if some of the messages are dropped or delayed the system continues to operate.
+
+Onion Architecture
+==================
+Core Domain: (Should be isolatd from the outside world)
+	Entity
+	Commands(Actions)/Events(Result of actions)/Messages(Commands & Queries)
+	Domain Services
+Non-Core Domain:
+	Database/Repositories
+	File systems
+	3rd parties systems
+Non-Domain:
+	Application Services
+	UI
+
+Infrastructure
+==============
+Spring Framework 6.X
+Spring Boot      3.X
+Maven & Gradle
+---------------- Back End Technology
+Spring MVC & Thymeleaf             https://spring.io/guides/gs/serving-web-content/
+---------------- Front End  Technology
+Responsive                         Bootstrap 5.x
+
+---------------- Options
+HTTPS & OpenSSL Certificate
+RTL
+Multi Languages
+Logging
+Cache (Redis, Memcached, ...)    http://memcached.org/
+---------------- Mindsets
+Reactive Manifesto                           https://www.reactivemanifesto.org/
+Frameworkless Manifesto                      https://www.frameworklessmovement.org/    https://github.com/frameworkless-movement/manifesto
+spotify squad/guild model                    https://www.atlassian.com/agile/agile-at-scale/spotify
+Manifesto for Agile Software Development     https://agilemanifesto.org/
+Twelve Principles of Agile Software          https://agilemanifesto.org/principles.html
+======================================== Design Principles
+Goal of Design Principles
+Code must be KISS, DRY and YAGNI!
+	• Design principles¹ should lead to good object-oriented design.
+	• Code and architecture smells are based on the violation of accepted design principles.
+	• Provide important information on how to fix code and architecture smells.
+	• If the violated design principle can be identified, it provides a first indication of what a better structure for the system might look like.
+	• Have been published and propagated by Robert C. Martin, Bertrand Meyer and Barbara Liskov, among others.
+---------------- 
+SOLID  (object-oriented design) 
+	1- Single responsibility principle (SRP):
+	2- Open-closed principle (OCP):
+	3- Liskov substitution principle (LSP):
+	4- Interface segregation principle (ISP):
+	5- Dependency inversion principle (DIP):
+	
+
+KISS   (Keep it simple, stupid)
+	• Think of several options and then try the simplest option first.
+	• Always ask: Is there an easier way to do this?
+	• Think about the future maintainers, assume that they will be you, and work on that basis.
+	• When you look at existing systems, ask: Do I need all this stuff or Do we need it at all?
+	
+	• Means that always the simplest solution of a problem should be chosen.
+	• Avoid code that is too complex and therefore too complicated.
+	• Finding simple solutions is a rule that helps to avoid various errors.
+	• A healthy rejection of non-simple solutions is a sign of searching for good code.
+	• The more difficult code is to explain, the more likely it is that it is more complicated than necessary and is not the most elegant solution.
+	• Make things as simple as possible, but not simpler!
+
+YAGNI (You Aren't Gonna Need It)
+	• The architecture should be intended to support current and future requirements agreed with business stakeholders.
+	• Where no requirement, also no implementation!
+	• A program should only implement functionality when this functionality is needed.
+	• Contrary to this approach, in practice it is often attempted to prepare programs for possible future change requests and features through additional or more general code. “…this is what THEY will demand soon anyway…”
+	• Such code can be very annoying to read, understand, change existing functionality and costs time and money!
+
+POLA (Principle of least astonishment)
+	• Keep things consistent so that people are not surprised when they find that a similar task is being done in a different place in a different way.
+	• If a difference is needed, document why.
+	• Consistency guides understanding, if you name things wrong or call the same thing by different names, you increase complexity.
+	
+LoD (The Law of Demeter) (a less well-known principle) (principle of least knowledge)  https://en.wikipedia.org/wiki/Law_of_Demeter
+	1- A unit should have only limited knowledge about other units: only units "closely" related to the current unit.
+	2- A unit should only talk to its immediate friends
+	3- A unit should not  talk to strangers
+
+SCP (Speaking Code Principle) Writing code that speaks for itself and that does not need a comment.
+	• Code should communicate its purpose, even without comment and documentation.
+	• Comments are no substitute for bad code.
+	• Clear and expressive code with few comments is much better than messy and complex code with numerous comments.
+	• Instead of spending time writing comments that explain the chaos, spend time on cleaning up the chaos.
+	• Comment must be adjusted when the code is changed.
+	
+DRY    (Don't repeat yourself)
+	• Refers to the avoidance of duplicated code, i.e. code fragments that are implemented in the same or very similar way in several places.
+	• Redundant existing source code is difficult to maintain, as consistency between the individual duplicates must be ensured.
+	• In systems that remain loyal to the DRY principle, however, changes need only be made in one place.
+
+SoC (Separation of concerns) (single responsibility architecture)
+	• Keep related things together, unrelated things apart.
+	• A component should have exactly one task.
+	• Avoid mixing of several responsibilities in e.g. one class.
+	• Components become simpler, easier to understand, maintain and have better reusability.
+	• The complex of tasks of a unit should be self-contained     (high cohesion).
+	• The unit should depend as little as possible on other units (low  coupling).
+		N-tier architecture
+
+======================================== 
+
+CQRS and Event Sourcing             "Command and Query Responsibility Segregation"  -->> https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
+	1- SQL/Relational : High normal forms are good for commands(Create, Update, Delete)
+	2- NoSQL          : Low  normal forms are good for queries(Read/Select)
+	-- Note           : CAP & PACELC theorem                                        -->> https://en.wikipedia.org/wiki/PACELC_theorem
+GRASP   (object-oriented design)    "General Responsibility Assignment Software Patterns (or Principles)"
+DTSTTCPW                            "do the simplest thing that could possibly work"
+GraphQL     graphql.org
+
+
+Domain-Driven Design     4-tier architecture
+	1- Presentation Layer
+	2- Domain Layer          (Business Part)(No Dependency)
+	3- Infrastructure Layer  (Depend on Domain Layer)
+	4- Application Layer     (Technical Part)(Depend on Domain Layer & Infrastructure Layer)
+Anaemic Domain Model vs. Rich Domain Model
+
+Design patterns
+	1- Creative: Helpful in creating objects
+	2- Structural: Helpful in dealing with the composition of objects
+	3- Behavioral: Helpful in defining the interactions between objects and distributing responsibility
+	
+Microservices            architecture
+Stateless services       architecture
+Event-driven             architecture
+Data storage and access  architecture
+Resiliency               architecture
+Evolution and operations architecture
+
+Facade pattern        (a software-design pattern commonly used in object-oriented programming) https://en.wikipedia.org/wiki/Facade_pattern
+---------------- Microservice Architecture
+Saga Orchestration vs Choreography vs Hybrid approach
+---------------- Containerized
+Dockerized                         https://spring.io/guides/topicals/spring-boot-docker/
+Kubernetes                         https://spring.io/guides/topicals/spring-on-kubernetes/
+Cloud Native Applications          https://spring.io/projects/spring-cloud
+---------------- Rule Engines
+
+---------------- Business Process Model and Notation
+https://www.bpmn.org/
+https://www.predictiveanalyticstoday.com/open-source-free-bpm-tools/
+https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation
+https://en.wikipedia.org/wiki/Comparison_of_Business_Process_Model_and_Notation_modeling_tools
+
+Business Process Management Software
+	Open-Source and Free
+		Imixs-BPMN       (www.imixs.org)    (Model processes, Execute processes)  https://github.com/imixs/imixs-workflow/releases
+		jBPM             (www.jbpm.org)     (Model processes, Execute processes) (Integrated with frameworks such as Spring(Boot), CDI/EJB, OSGi)
+		Bitrix 24        (www.bitrix24.pl, Standard BPM)
+		RunaWFE          (runawfe.org)
+		Modelio          (www.modelio.org)  (Model processes) https://github.com/ModelioOpenSource/Modelio/releases
+	Open-Source and Free Trial
+		Flowable Modeler (www.flowable.org) (Model processes, Execute processes, Monitor processes)   https://github.com/flowable/flowable-engine
+		Alfresco     (www.alfresco.com)
+		Bonisoft     (www.bonitasoft.com)   (Model processes, Execute processes)
+	Close-Source and Free
+		Aris Express (www.ariscommunity.com/aris-express)
+		Bizagi       (www.bizagi.com/en/platform/modeler)
+		Pipefy       (www.pipefy.com)
+		Appian       (www.appian.com , Cloud)
+	Others	
+		Visio                               (Model processes)
+		www.activiti.org     (Spring Cloud) (Model processes, Execute processes, Monitor processes)
+		kissflow.com         (Cloud)
+		www.zoho.com
+		camunda.com          www.camunda.org(Cloud and on-premise) (Model processes, Execute processes, Monitor processes)
+		www.processmaker.com (Cloud and on-premise)
+		webcon.com           (Cloud and on-premise)
+		www.nintex.com       (Cloud and on-premise)
+		www.pnmsoft.com
+		www.cmwlab.com
+		
+---------------- Technology
+Web
+	1- WebAssembly
+	2- Web Serivce
+
+Reactive                           --> Spring WebFlux, The need for a non-blocking web stack to handle concurrency with a small number of threads and scale with fewer hardware resources. The other part of the answer is functional programming.
+Single Page Application            --> Angular, ReactJS,  VUE
+Progressive                        --> HTTPS
+RealTime                           -->
+Mashup                             -->
+
+Plugin Based
+WorkFlow Engine
+Messaging broker 
+	RabbitMQ(AMQP)(2007)https://www.rabbitmq.com/(   50,000 messages per second)(one-to-one and one-to-many consumers)(persistent & transient messages)
+	Apache Kafka  (2011)(1,000,000 messages per second)(one-to-many consumers)(data persistency)
+	Redis 5+            (1,000,000 messages per second)(one-to-one and one-to-many consumers)(data persistency)
+	YAMI4                http://www.inspirel.com/yami4/
+	ZeroMQ       (2007)  https://zeromq.org/  https://github.com/zeromq  http://www.inspirel.com/articles/YAMI4_vs_ZeroMQ.html
+	Apache Flink (2011)
+	Apache Samza (2020)
+	JMS( ActiveMQ and Artemis)
+	RSocket
+	beanstalkd           https://beanstalkd.github.io/
+Hibernet ORM 
+API
+---------------- 
+---------------- Blockchain Platforms
+Smart Contracts To Build Modern Finance Applications
+---------------- Back End Technology
+Spring WebFlux                     https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html
+Unit Tests                              https://spring.io/guides/gs/testing-web/
+Hibernate, JPA & MySQL             https://spring.io/guides/gs/accessing-data-mysql/
+Multi Module Project               https://spring.io/guides/gs/multi-module/
+-------- NoSQL DB
+Hadoop
+MongoDb
+Neo4j
+---------------- Front End Technology
+ReactJS
+---------------- Documentations
+TOGAF 10.x OA
+Requirments
+Process
+WorkFlow
+Class & Use Case Diagrams
+
+---------------- Clean Code   //https://gist.github.com/danilobatistaqueiroz/95b22d5041cc87237a849288bb787f5f
+	understandability 
+	readability
+	changeability
+	extensibility
+	maintainability
+
+
+Monolithic architecture challenges
+==================================
+Large code base                              : This is a scenario where the code lines outnumber the comments by a great margin. As components are interconnected, we will have to bear with a repetitive code base.
+Too many business modules                    : This is in regard to modules within the same system.
+Codebase complexity                          : This results in a higher chance of code-breaking due to the fix required in other modules or services.
+Complex code deployment                      : You may come across minor changes that would require whole system deployment.
+One module failure affecting the whole system: This is in regard to modules that depend on each other.
+Scalability                                  : This is required for the entire system and not just the modules in it.
+Intermodule dependency                       : This is due to tight coupling.
+Spiraling development time                   : This is due to code complexity and interdependency.
+Inability to easily adapt to a new technology: In this case, the entire system would need to be upgraded.
+
+Service-Oriented architecture challenges
+========================================
+
+======================================== Methodology SAFe
+https://scaledagileframework.com/
+https://en.wikipedia.org/wiki/Scaled_agile_framework
+
+SAFe     (Scaled Agile Framework)         https://karokasb.org/scaled-agile-framework-safe/
+LeSS     (Large-Scale Scrum)
+======================================== BABOK
+https://karokasb.org/requirements-documents/
+۹ نوع مختلف اسناد الزامات
+۱. سند الزامات کسب و کار (BRD)
+۲.اسناد الزامات عملکردی (FRD)
+۳. اسناد الزامات بازار (MRD)
+۴. اسناد الزامات محصول (PRD)
+۵.اسناد الزامات رابط کاربری (UIRD)
+۶. اسناد الزامات فنی (TRD)
+۷. اسناد الزامات کیفیت
+۸. اسناد الزامات نرم افزار یا مشخصات الزامات نرم افزار (SRS)
+۹. اسناد الزامات مشتری
+======================================== Non functional
+https://karokasb.org/non-functional-requirements/
+======================================== Product Owner vs Product Manager/
+https://karokasb.org/product-owner-vs-product-manager/
+========================================
+ 
+========================================  Some Guidelines For Deciding Whether To Use A Rules Engine
+https://web.archive.org/web/20081208082720/http://herzberg.ca.sandia.gov/guidelines.shtml
+
+	Is your algorithm primarily compute-intensive or is there significant decision-making capability involved?
+		If your basic algorithm is compute-intensive or a table-lookup, without much conditional branching or decision-making involved, then don't use a rules engine.
+		If however, the algorithm involves significant conditional branching or decision-making, then consider using a rules engine.
+	Once you've determined that your algorithm involves significant decision-making capability, you ought to be able to write some rules specifying the decisions that need to be made. Are the decisions that need to be made relatively simple, or potentially complex?
+		If you find that you can't write the decision rules, for whatever reason, then stop here until you can, or use some other tool instead that will help you discover the rules you need. Put another way, if you can't state some rules, don't use a rules engine.
+		If you have 2, or fewer, conditions in your rules (or, for example, a block with 2 nested if-statements or less), don't use a rules engine-it's probably overkill.
+		If you have 3 or more conditions in your rules (or, for example, a block with 3 or more nested if-statements in pseudo-code), then consider using a rules engine.
+	Once you've determined that the decisions are complex enough, is your algorithm basically static, or are the rules likely to change reasonably often over time?
+		If the rules/logic are well-defined and static, then don't use a rules engine-you probably don't need the overhead or flexibility.
+		If the rules are likely to change over time due to the nature of the application, then consider using a rules engine-the flexibility is worth the overhead.
+	Once you've determined that rules may need to be flexible, are you going to maintain the code or finished product over time, or is this effort a one-shot effort?
+		If the code is not going to be maintained over time, then don't use a rules engine-you probably won't gain any significant advantage from it.
+		If the code is going to be maintained over time, consider using a rules engine-the ROI will be worth it (see question #6).
+	Rules engines continue to get faster and faster, but some applications simply require every bit of speed and performance optimization you can reasonably give. Does your customer require a custom solution or do you need to hard-wire the algorithm for absolute high-end performance, or can the solution accommodate a rules engine?
+		If you need to optimize for speed and memory, or your customer requires a custom solution, then don't use a rules engine.
+		If the performance requirements will accommodate a rules engine solution, then consider using one.
+	If you answered all the other questions appropriately, can the project/product line afford the overall cost of using a rules engine over the project/product lifecycle?
+		There are a number of costs typically associated with using rules engine tools:
+			Licensing fees for development and deployment of the engine
+			Training developers and (if necessary) end-users (time and money)
+			ROI (return on investment)-financial analysts have shown that you don't begin to break even monetarily on the typical investment in rules engine technology until at least 1 year after deployment to your customer. However, at that point, the flexibility and ease-of-maintenance begin to show significant returns.
+		If the project schedule or product lifecycle can't accommodate the cost of a rules engine, in terms of time and money, then don't use one.
+		If you can't afford to wait at least a year to break even and begin to see a significant ROI, don't use a rules engine.
+		If you can't afford to train your developers and end-users, and you can't afford to hire a consultant, don't use a rules engine.
+		If, however, your project/product lifecycle costs can accommodate the use of a rules engine, it would be well worth the investment, so use one.
+
+Additional Note
+	A rules engine tool can be very helpful during software development, regardless of other considerations:
+		For simulation and prototyping.
+		In cases where you find you may not really know or understand the rules you are trying to encode in your algorithm, a rules engine can provide a flexible way to encode and modify the rules over time as they are discovered.
+		A rules engine architecture also provides a convenient structure for separating "business logic" from the rest of the system, aiding in the effort to clearly "separate concerns".
+
+======================================== Clean Code Fundamentals
+Design is good when
+	– it breaks down the complexity of the software into manageable and simple problems.
+	– small interfaces were defined.
+	– the components are decoupled.
+	– the components have clearly defined responsibilities.
+	– the software is maintainable.
+	– the software can be easily changed and extended.
+	– the software is stable.
+	– Bugs can be fixed quickly.
+	– the software is reusable in other software projects.
+	– the code is understandable.
+---------------- 
+Symptoms of bad design
+	• Never-touch-running-code Syndrome
+		– Developers are afraid to change code.
+		– Many workarounds, code is developed around it.
+		– Changes have unknown and undetected side effects.
+	• Small change in requirements leads to big changes in code
+	• Reuse through code duplication (Copy-Paste)
+		– Developers chase after the places that need to be changed.
+		– The more code the more difficult it becomes to keep track of duplicates.
+		– Errors have to be patched several times at different places.
+	• Cyclic relations between artifacts
+	– Artifacts that are cyclically coupled cannot be tested individually.
+		– Artifacts that are used in different cycles often play several roles, which makes them difficult to understand.
+		– Artifacts that are used in different cycles cannot be exchanged easily.
+---------------- 
+Criteria for good design
+	• Correctness
+		– Fulfilment of requirements
+		– Playback of all functions of the system model
+		– Ensuring the non-functional requirements
+	• Comprehensibility
+		– Self-explanatory code and design
+		– Good documentation
+	• High cohesion
+	• Low coupling
+	• Reusability
+	• Customizability
+	• No cyclic dependencies
+
+
+
+========================================  Concurrency vs. Parallelism
+
+Concurrency: The recognition that we can divide up a computation (an algorithm)
+			 into separate pieces where the order of execution of the pieces doesn’t matter.
+			 Concurrency is a function of the algorithm you use to solve a problem. This also
+			 means that even if you create a concurrent program, if you run it on a single
+			 processor it will still run serially.
+Parallelism: The mechanism used to execute a program on a particular machine
+			 or machine architecture in order to improve the performance of the program.
+			 Parallelism allows a concurrent program to execute on many different processors
+			 and thus potentially improve the overall performance of the program.
+
+======================================== SaaS (twelve-factor app)
+https://12factor.net/
+In the modern era, software is commonly delivered as a service: called web apps, or software-as-a-service. The twelve-factor app is a methodology for building software-as-a-service apps that:
+	Use declarative formats for setup automation, to minimize time and cost for new developers joining the project;
+	Have a clean contract with the underlying operating system, offering maximum portability between execution environments;
+	Are suitable for deployment on modern cloud platforms, obviating the need for servers and systems administration;
+	Minimize divergence between development and production, enabling continuous deployment for maximum agility;
+	And can scale up without significant changes to tooling, architecture, or development practices.
+
+---------------- The Twelve Factors
+ 1- Codebase            : One codebase tracked in revision control, many deploys
+ 2- Dependencies        : Explicitly declare and isolate dependencies
+ 3- Config              : Store config in the environment
+ 4- Backing services    : Treat backing services as attached resources
+ 5- Build, release, run : Strictly separate build and run stages
+ 6- Processes           : Execute the app as one or more stateless processes
+ 7- Port binding        : Export services via port binding
+ 8- Concurrency         : Scale out via the process model
+ 9- Disposability       : Maximize robustness with fast startup and graceful shutdown
+10- Dev/prod parity     : Keep development, staging, and production as similar as possible
+11- Logs                : Treat logs as event streams
+12- Admin processes     : Run admin/management tasks as one-off processes
+========================================
+
+======================================== Clustering
+https://docs.totaljs.com/total4/cc6f7001uu51c/
+https://nodejs.org/api/cluster.html
+https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/
