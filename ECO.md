@@ -120,7 +120,7 @@
 ------------------
 
 https://en.wikipedia.org/wiki/Chess_opening
-> [!NOTE]
+
 > Open games: 1.e4 e5
 * 1.e4 e5 Double King's Pawn Opening or Open Game
 * 1.e4 e5 2.Nf3 Nc6 3.Bb5 Ruy Lopez
@@ -135,7 +135,7 @@ https://en.wikipedia.org/wiki/Chess_opening
 * 1.e4 e5 2.d4 exd4 3.Qxd4 Center Game
 * 1.e4 e5 2.d4 exd4 3.c3 Danish Gambit
 
-Semi-open games: 1.e4, Black plays other than 1...e5
+> Semi-open games: 1.e4, Black plays other than 1...e5
 * 1.e4 c5 Sicilian Defense
 * 1.e4 e6 French Defense
 * 1.e4 c6 Caro–Kann Defense
@@ -144,7 +144,7 @@ Semi-open games: 1.e4, Black plays other than 1...e5
 * 1.e4 Nf6 Alekhine's Defense
 * 1.e4 g6 Modern Defense
 
-Closed games: 1.d4 d5
+> Closed games: 1.d4 d5
 * 1.d4 d5 Double Queen's Pawn Opening or Closed Game
 * 1.d4 d5 2.c4 Queen's Gambit
 * 1.d4 d5 2.c4 dxc4 Queen's Gambit Accepted (QGA)
@@ -153,7 +153,7 @@ Closed games: 1.d4 d5
 * 1.d4 d5 2.e3 Nf6 3.Bd3 c5 4.c3 Nc6 5.f4 (a typical move sequence) Stonewall Attack
 * 1.d4 d5 2.Nf3 Nf6 3.e3 Colle System
 
-Indian defenses: 1.d4 Nf6
+> Indian defenses: 1.d4 Nf6
 * 1.d4 Nf6 2.c4 c5 3.d5 e6 Modern Benoni
 * 1.d4 Nf6 2.c4 c5 3.d5 b5 Benko Gambit (or Volga Gambit)
 * 1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 Nimzo-Indian Defense
@@ -162,11 +162,11 @@ Indian defenses: 1.d4 Nf6
 * 1.d4 Nf6 2.c4 g6 3.Nc3 d5 Grünfeld Defense
 * 1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 King's Indian Defense (KID)
 
-Other Black responses to 1.d4
+> Other Black responses to 1.d4
 * 1.d4 c5 Benoni Defense
 * 1.d4 f5 Dutch Defense
 
-Flank openings (including English, Réti, Bird's, and White fianchettos)
+> Flank openings (including English, Réti, Bird's, and White fianchettos)
 * 1.b3 Larsen's Opening
 * 1.b4 Sokolsky Opening
 * 1.c4 English Opening
@@ -176,7 +176,7 @@ Flank openings (including English, Réti, Bird's, and White fianchettos)
 * 1.g3 Benko Opening
 * 1.g4 Grob's Attack
 
-Unusual first moves for White
+> Unusual first moves for White
 * too passive for White (1.d3, 1.e3, 1.c3, or 1.Nc3)
 * gratuitously weakens White's position (1.f3 or 1.g4)
 * does little to aid White's development or control the center (1.a3, 1.a4, 1.h3, or 1.h4)
