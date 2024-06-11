@@ -188,7 +188,7 @@
 
 > [!IMPORTANT]
 > Useful Links
-<details>
+> <details>
   <summary>Useful Links</summary>
     <p>
     > * https://en.wikipedia.org/wiki/Chess_opening
