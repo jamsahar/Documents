@@ -1,37 +1,37 @@
 <h1 align="center"><strong><em><ins>Encyclopaedia of Chess Openings</ins></em></strong></h1>
 <p align="center">
-[The Ultimate Chess Openings Cheat Sheet](https://github.com/jamsahar/Documents/blob/main/ECO.md)
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Chess_Pieces_Sprite.svg/640px-Chess_Pieces_Sprite.svg.png"  width="640" height="213" border="1"/>
 </p>
 
+[The Ultimate Chess Openings Cheat Sheet](https://github.com/jamsahar/Documents/blob/main/ECO.md)
 # ECO Cheatsheet [^1]
-
-* A00-03 Unusual White Opening Moves
-* A04-09 The Reti Opening
-* A10-39 The English Opening
-* A40-55 Miscellaneous Queen’s Pawn Openings
-* A56-79 The Benoni Defense
-* A80-99 The Dutch Defense
-* B00-01 Miscellaneous Replies to e4
-* B02-05 Alekhine’s Defense
-* B06-09 The Modern/Pirc/Ufimtsev group
-* B10-19 The Caro-Kann Defense
-* B20-99 The Sicilian Defense
-* C00-19 The French Defense
-* C20-29 The Romantic Openings (C20-29)
-* C30-39 The King’s Gambit
-* C40-49 Double King Pawn games with 2. Nf3
-* C50-59 Italian Game
-* C60-99 The Ruy Lopez
-* D00-09 The Queen’s Pawn Game
-* C10-19 The Slav Defense
-* D20-29 The Queen’s Gambit Accepted
-* D30-69 The Queen’s Gambit Declined
-* D70-99 The Grunfeld Defense and Neo-Grunfeld
-* E00-09 The Catalan Opening
-* E12-19 The Queen’s Indian Defense
-* E20-59 The Nimzo-Indian Defense
-* E60-99 The King’s Indian Defense
+> [!IMPORTANT]
+> * A00-03 Unusual White Opening Moves
+> * A04-09 The Reti Opening
+> * A10-39 The English Opening
+> * A40-55 Miscellaneous Queen’s Pawn Openings
+> * A56-79 The Benoni Defense
+> * A80-99 The Dutch Defense
+> * B00-01 Miscellaneous Replies to e4
+> * B02-05 Alekhine’s Defense
+> * B06-09 The Modern/Pirc/Ufimtsev group
+> * B10-19 The Caro-Kann Defense
+> * B20-99 The Sicilian Defense
+> * C00-19 The French Defense
+> * C20-29 The Romantic Openings (C20-29)
+> * C30-39 The King’s Gambit
+> * C40-49 Double King Pawn games with 2. Nf3
+> * C50-59 Italian Game
+> * C60-99 The Ruy Lopez
+> * D00-09 The Queen’s Pawn Game
+> * C10-19 The Slav Defense
+> * D20-29 The Queen’s Gambit Accepted
+> * D30-69 The Queen’s Gambit Declined
+> * D70-99 The Grunfeld Defense and Neo-Grunfeld
+> * E00-09 The Catalan Opening
+> * E12-19 The Queen’s Indian Defense
+> * E20-59 The Nimzo-Indian Defense
+> * E60-99 The King’s Indian Defense
 
 ------------------
 
