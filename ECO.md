@@ -120,8 +120,8 @@
 ------------------
 
 https://en.wikipedia.org/wiki/Chess_opening
-
-Open games: 1.e4 e5
+> [!NOTE]
+> Open games: 1.e4 e5
 * 1.e4 e5 Double King's Pawn Opening or Open Game
 * 1.e4 e5 2.Nf3 Nc6 3.Bb5 Ruy Lopez
 * 1.e4 e5 2.Nf3 Nc6 3.d4 Scotch Game
