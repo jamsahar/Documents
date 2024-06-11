@@ -4,7 +4,8 @@
 
 [The Ultimate Chess Openings Cheat Sheet](https://github.com/jamsahar/Documents/blob/main/ECO.md)
 <h1 align="center"><strong><em><ins>Encyclopaedia of Chess Openings</ins></em></strong></h1>
-<h1><p align="center">ECO Cheatsheet V3 [^1]</p></h1>
+
+# ECO Cheatsheet V3 [^1]
 
 * A00-03 Unusual White Opening Moves
 * A04-09 The Reti Opening
