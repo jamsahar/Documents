@@ -3,7 +3,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Chess_Pieces_Sprite.svg/640px-Chess_Pieces_Sprite.svg.png"  width="640" height="213" border="1"/>
 </p>
 
-[The Ultimate Chess Openings Cheat Sheet](https://github.com/jamsahar/Documents/blob/main/ECO.md)
+[The Ultimate Chess Openings Cheat Sheet](https://github.com/jamsahar/Documents/blob/main/ECO.md) <img src="https://en.wikipedia.org/wiki/File:GPLv3_Logo.svg"  width="72" height="35" border="1"/>
 # ECO Cheatsheet [^1]
 > [!IMPORTANT]
 > * A00-03 Unusual White Opening Moves
