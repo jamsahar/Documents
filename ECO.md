@@ -1,11 +1,10 @@
-<h1 align="center"><strong><em><ins>Encyclopaedia of Chess Openings</ins></em></strong> <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg"  width="72" height="35" border="1"/></h1>
+<h1 align="center"><strong><em><ins>The Ultimate Chess Openings Cheat Sheet</ins></em></strong> <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg"  width="72" height="35" border="1"/></h1>
 <p align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Chess_Pieces_Sprite.svg/640px-Chess_Pieces_Sprite.svg.png"  width="640" height="213" border="1"/>
 </p>
 
-[The Ultimate Chess Openings Cheat Sheet](https://github.com/jamsahar/Documents/blob/main/ECO.md) 
+# Encyclopaedia of Chess Openings ECO Cheatsheet [^1]
 
-# ECO Cheatsheet [^1]
 > [!IMPORTANT]
 > * A00-03 Unusual White Opening Moves
 > * A04-09 The Reti Opening
@@ -35,7 +34,8 @@
 > * E60-99 The King’s Indian Defense
 
 ------------------
-https://en.wikipedia.org/wiki/Chess_opening
+
+[wikipedia.org](https://en.wikipedia.org/wiki/Chess_opening)
 
 > Open games: 1.e4 e5
 * 1.e4 e5 Double King's Pawn Opening or Open Game
