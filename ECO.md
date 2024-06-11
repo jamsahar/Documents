@@ -4,7 +4,7 @@
 </p>
 
 [The Ultimate Chess Openings Cheat Sheet](https://github.com/jamsahar/Documents/blob/main/ECO.md) 
-<p align="center"><img src="https://en.wikipedia.org/wiki/File:GPLv3_Logo.svg"  width="72" height="35" border="1"/></p>
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg"  width="72" height="35" border="1"/></p>
 # ECO Cheatsheet [^1]
 > [!IMPORTANT]
 > * A00-03 Unusual White Opening Moves
