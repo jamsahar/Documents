@@ -185,7 +185,7 @@
 ----------
 > [!IMPORTANT]
 > Useful Links
->
+> * https://en.wikipedia.org/wiki/Chess_opening/
 > * https://www.chess.com/clubs/forum/view/wikipedia-list-of-chess-openings/
 > * https://www.365chess.com/eco.php/
 > * https://www.ficsgames.org/eco.html/
@@ -194,6 +194,6 @@
 > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_C/
 > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_D/
 > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_E/
-> * https://en.wikipedia.org/wiki/Chess_opening/
+
 
 [^1]: https://github.com/jamsahar/Documents/blob/main/ECO.md
