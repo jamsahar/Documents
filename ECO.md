@@ -185,11 +185,12 @@
 |**`E60-99`**|1.d4 Nf6 2.c4 g6                                |The King’s Indian Defence |
 
 ----------
+
+> [!IMPORTANT]
+> Useful Links
 <details>
-  <summary>Title 2</summary>
+  <summary>Useful Links</summary>
     <p>
-    > [!IMPORTANT]
-    > Useful Links
     > * https://en.wikipedia.org/wiki/Chess_opening
     > * https://www.chess.com/clubs/forum/view/wikipedia-list-of-chess-openings
     > * https://www.365chess.com/eco.php
