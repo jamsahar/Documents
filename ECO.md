@@ -190,7 +190,6 @@
 |**`D80-99`**|1.d4 Nf6 2.c4 g6 3.Nc3 d5                       |Grünfeld Defence                                                                    |
 
 </details>
-
 <details>
 <summary>E00-E99</summary>
 
