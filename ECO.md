@@ -185,19 +185,24 @@
 |**`E60-99`**|1.d4 Nf6 2.c4 g6                                |The King’s Indian Defence |
 
 ----------
-> [!IMPORTANT]
-> Useful Links
-> * https://en.wikipedia.org/wiki/Chess_opening
-> * https://www.chess.com/clubs/forum/view/wikipedia-list-of-chess-openings
-> * https://www.365chess.com/eco.php
-> * https://www.thechesswebsite.com/chess-openings
-> * https://www.hiarcs.com/hce-manual/pc/ECOopeningnaming.html
-> * https://github.com/seberg/icsbot/blob/master/misc/eco.txt
-> * https://github.com/jdart1/arasan-chess/blob/master/book/eco
-> * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_A
-> * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_B
-> * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_C
-> * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_D
-> * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_E
+<details>
+  <summary>Title 2</summary>
+    <p>
+    > [!IMPORTANT]
+    > Useful Links
+    > * https://en.wikipedia.org/wiki/Chess_opening
+    > * https://www.chess.com/clubs/forum/view/wikipedia-list-of-chess-openings
+    > * https://www.365chess.com/eco.php
+    > * https://www.thechesswebsite.com/chess-openings
+    > * https://www.hiarcs.com/hce-manual/pc/ECOopeningnaming.html
+    > * https://github.com/seberg/icsbot/blob/master/misc/eco.txt
+    > * https://github.com/jdart1/arasan-chess/blob/master/book/eco
+    > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_A
+    > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_B
+    > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_C
+    > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_D
+    > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_E
+    </p>
+</details>
 
 [^1]: https://github.com/jamsahar/Documents/blob/main/ECO.md
