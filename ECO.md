@@ -104,7 +104,6 @@
 
 <details>
 <summary>A00-A99</summary>
-
 | ECO        |Moves                                           |Name                                         |
 |:-----------|:-----------------------------------------------|:--------------------------------------------|
 |**`A00`**   |                                                |Uncommon Openings: 1.g3 (Benko Opening), 1.Nc3 (Sleipner Opening), 1.a3 (Anderssen's Opening), 1.b4 (Sokolsky Opening), 1.g4 (Grob's Attack), 1.h3 (Basmanic Defence), 1.c3 (Saragossa Opening), 1.d3 (Mieses Opening), 1.e3 (French Attack), 1.h4 (Desprez Opening), 1.a4 (Ware Opening), 1.Nh3 (Amar Opening), 1.Na3 (Durkin's Attack), 1.f3 (Gedult's Opening)|
@@ -128,7 +127,6 @@
 |**`A57-59`**|1.d4 Nf6 2.c4 c5 3.d5 b5                        |Benko-Volga Gambit                           |
 |**`A60-79`**|1.d4 Nf6 2.c4 c5 3.d5 e6                        |Modern Benoni                                |
 |**`A80-99`**|1.d4 f5                                         |The Dutch Defence                            |
-
 </details>
 
 | ECO        |Moves                                           |Name                     |
