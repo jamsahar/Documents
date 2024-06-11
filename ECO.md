@@ -1,4 +1,4 @@
-<h1 align="center"><strong><em><ins>Encyclopaedia of Chess Openings</ins></em></strong></h1><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg"  width="72" height="35" border="1"/>
+<h1 align="center"><strong><em><ins>Encyclopaedia of Chess Openings</ins></em></strong><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg"  width="72" height="35" border="1"/></h1>
 <p align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Chess_Pieces_Sprite.svg/640px-Chess_Pieces_Sprite.svg.png"  width="640" height="213" border="1"/>
 </p>
