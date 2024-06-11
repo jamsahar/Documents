@@ -3,10 +3,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Chess_Pieces_Sprite.svg/320px-Chess_Pieces_Sprite.svg.png"  width="320" height="107" border="1"/>
 </p>
 
-# Encyclopaedia of Chess Openings ECO Cheatsheet [^1]
-
-<details>
-<summary>B00-B99</summary>
+# Encyclopaedia of Chess Openings ECO Cheatsheet A00-E99 [^1]
 
 > [!IMPORTANT]
 > * A00-03 Unusual White Opening Moves
@@ -36,7 +33,6 @@
 > * E20-59 The Nimzo-Indian Defense
 > * E60-99 The King’s Indian Defense
 
-</details>
 ------------------
 
 [wikipedia.org](https://en.wikipedia.org/wiki/Chess_opening)
