@@ -34,6 +34,70 @@
 > * E60-99 The King’s Indian Defense
 
 ------------------
+https://en.wikipedia.org/wiki/Chess_opening
+
+> Open games: 1.e4 e5
+* 1.e4 e5 Double King's Pawn Opening or Open Game
+* 1.e4 e5 2.Nf3 Nc6 3.Bb5 Ruy Lopez
+* 1.e4 e5 2.Nf3 Nc6 3.d4 Scotch Game
+* 1.e4 e5 2.Nf3 Nc6 3.Bc4 Italian Game
+* 1.e4 e5 2.Nf3 Nc6 3.Nc3 Nf6 Four Knights Game
+* 1.e4 e5 2.Nf3 Nf6 Petrov's Defense
+* 1.e4 e5 2.Nf3 d6 Philidor Defense
+* 1.e4 e5 2.Nc3 Vienna Game
+* 1.e4 e5 2.Bc4 Bishop's Opening
+* 1.e4 e5 2.f4 King's Gambit
+* 1.e4 e5 2.d4 exd4 3.Qxd4 Center Game
+* 1.e4 e5 2.d4 exd4 3.c3 Danish Gambit
+
+> Semi-open games: 1.e4, Black plays other than 1...e5
+* 1.e4 c5 Sicilian Defense
+* 1.e4 e6 French Defense
+* 1.e4 c6 Caro–Kann Defense
+* 1.e4 d5 Scandinavian Defense (also known as the Center Counter defense)
+* 1.e4 d6 2.d4 Nf6 3.Nc3 g6 Pirc Defense
+* 1.e4 Nf6 Alekhine's Defense
+* 1.e4 g6 Modern Defense
+
+> Closed games: 1.d4 d5
+* 1.d4 d5 Double Queen's Pawn Opening or Closed Game
+* 1.d4 d5 2.c4 Queen's Gambit
+* 1.d4 d5 2.c4 dxc4 Queen's Gambit Accepted (QGA)
+* 1.d4 d5 2.c4 e6 Queen's Gambit Declined (QGD)
+* 1.d4 d5 2.c4 c6 Slav Defense
+* 1.d4 d5 2.e3 Nf6 3.Bd3 c5 4.c3 Nc6 5.f4 (a typical move sequence) Stonewall Attack
+* 1.d4 d5 2.Nf3 Nf6 3.e3 Colle System
+
+> Indian defenses: 1.d4 Nf6
+* 1.d4 Nf6 2.c4 c5 3.d5 e6 Modern Benoni
+* 1.d4 Nf6 2.c4 c5 3.d5 b5 Benko Gambit (or Volga Gambit)
+* 1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 Nimzo-Indian Defense
+* 1.d4 Nf6 2.c4 e6 3.Nf3 b6 Queen's Indian Defense
+* 1.d4 Nf6 2.c4 e6 3.g3 Catalan Opening
+* 1.d4 Nf6 2.c4 g6 3.Nc3 d5 Grünfeld Defense
+* 1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 King's Indian Defense (KID)
+
+> Other Black responses to 1.d4
+* 1.d4 c5 Benoni Defense
+* 1.d4 f5 Dutch Defense
+
+> Flank openings (including English, Réti, Bird's, and White fianchettos)
+* 1.b3 Larsen's Opening
+* 1.b4 Sokolsky Opening
+* 1.c4 English Opening
+* 1.Nf3 Zukertort Opening (characteristically followed by fianchettoing one or both bishops, and without an early d4)
+* 1.Nf3, 2.g3, 3.Bg2, 4.0-0, 5.d3, 6.Nbd2, 7.e4 King's Indian Attack (KIA) (moves may be played in many different orders)
+* 1.f4 Bird's Opening
+* 1.g3 Benko Opening
+* 1.g4 Grob's Attack
+
+> Unusual first moves for White
+* too passive for White (1.d3, 1.e3, 1.c3, or 1.Nc3)
+* gratuitously weakens White's position (1.f3 or 1.g4)
+* does little to aid White's development or control the center (1.a3, 1.a4, 1.h3, or 1.h4)
+* develops a knight to an inferior square (1.Na3 or 1.Nh3)
+
+------------------
 
 | ECO        |Moves                                           |Name                                         |
 |:-----------|:-----------------------------------------------|:--------------------------------------------|
@@ -116,70 +180,5 @@
 |**`E12-19`**|1.d4 Nf6 2.c4 e6 3.Nf3 b6                       |The Queen’s Indian Defence|
 |**`E20-59`**|1.d4 Nf6 2.c4 e6 3.Nc3 Bb4                      |The Nimzo-Indian Defence  |
 |**`E60-99`**|1.d4 Nf6 2.c4 g6                                |The King’s Indian Defence |
-
-------------------
-
-https://en.wikipedia.org/wiki/Chess_opening
-
-> Open games: 1.e4 e5
-* 1.e4 e5 Double King's Pawn Opening or Open Game
-* 1.e4 e5 2.Nf3 Nc6 3.Bb5 Ruy Lopez
-* 1.e4 e5 2.Nf3 Nc6 3.d4 Scotch Game
-* 1.e4 e5 2.Nf3 Nc6 3.Bc4 Italian Game
-* 1.e4 e5 2.Nf3 Nc6 3.Nc3 Nf6 Four Knights Game
-* 1.e4 e5 2.Nf3 Nf6 Petrov's Defense
-* 1.e4 e5 2.Nf3 d6 Philidor Defense
-* 1.e4 e5 2.Nc3 Vienna Game
-* 1.e4 e5 2.Bc4 Bishop's Opening
-* 1.e4 e5 2.f4 King's Gambit
-* 1.e4 e5 2.d4 exd4 3.Qxd4 Center Game
-* 1.e4 e5 2.d4 exd4 3.c3 Danish Gambit
-
-> Semi-open games: 1.e4, Black plays other than 1...e5
-* 1.e4 c5 Sicilian Defense
-* 1.e4 e6 French Defense
-* 1.e4 c6 Caro–Kann Defense
-* 1.e4 d5 Scandinavian Defense (also known as the Center Counter defense)
-* 1.e4 d6 2.d4 Nf6 3.Nc3 g6 Pirc Defense
-* 1.e4 Nf6 Alekhine's Defense
-* 1.e4 g6 Modern Defense
-
-> Closed games: 1.d4 d5
-* 1.d4 d5 Double Queen's Pawn Opening or Closed Game
-* 1.d4 d5 2.c4 Queen's Gambit
-* 1.d4 d5 2.c4 dxc4 Queen's Gambit Accepted (QGA)
-* 1.d4 d5 2.c4 e6 Queen's Gambit Declined (QGD)
-* 1.d4 d5 2.c4 c6 Slav Defense
-* 1.d4 d5 2.e3 Nf6 3.Bd3 c5 4.c3 Nc6 5.f4 (a typical move sequence) Stonewall Attack
-* 1.d4 d5 2.Nf3 Nf6 3.e3 Colle System
-
-> Indian defenses: 1.d4 Nf6
-* 1.d4 Nf6 2.c4 c5 3.d5 e6 Modern Benoni
-* 1.d4 Nf6 2.c4 c5 3.d5 b5 Benko Gambit (or Volga Gambit)
-* 1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 Nimzo-Indian Defense
-* 1.d4 Nf6 2.c4 e6 3.Nf3 b6 Queen's Indian Defense
-* 1.d4 Nf6 2.c4 e6 3.g3 Catalan Opening
-* 1.d4 Nf6 2.c4 g6 3.Nc3 d5 Grünfeld Defense
-* 1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 King's Indian Defense (KID)
-
-> Other Black responses to 1.d4
-* 1.d4 c5 Benoni Defense
-* 1.d4 f5 Dutch Defense
-
-> Flank openings (including English, Réti, Bird's, and White fianchettos)
-* 1.b3 Larsen's Opening
-* 1.b4 Sokolsky Opening
-* 1.c4 English Opening
-* 1.Nf3 Zukertort Opening (characteristically followed by fianchettoing one or both bishops, and without an early d4)
-* 1.Nf3, 2.g3, 3.Bg2, 4.0-0, 5.d3, 6.Nbd2, 7.e4 King's Indian Attack (KIA) (moves may be played in many different orders)
-* 1.f4 Bird's Opening
-* 1.g3 Benko Opening
-* 1.g4 Grob's Attack
-
-> Unusual first moves for White
-* too passive for White (1.d3, 1.e3, 1.c3, or 1.Nc3)
-* gratuitously weakens White's position (1.f3 or 1.g4)
-* does little to aid White's development or control the center (1.a3, 1.a4, 1.h3, or 1.h4)
-* develops a knight to an inferior square (1.Na3 or 1.Nh3)
 
 [^1]: https://github.com/jamsahar/Documents/blob/main/ECO.md
