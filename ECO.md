@@ -184,7 +184,8 @@
 
 ----------
 > [!IMPORTANT]
-> Useful Links 
+> Useful Links
+>
 > https://en.wikipedia.org/wiki/Chess_opening/
 > https://www.chess.com/clubs/forum/view/wikipedia-list-of-chess-openings/
 > https://www.365chess.com/eco.php/
