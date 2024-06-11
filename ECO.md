@@ -182,4 +182,16 @@
 |**`E20-59`**|1.d4 Nf6 2.c4 e6 3.Nc3 Bb4                      |The Nimzo-Indian Defence  |
 |**`E60-99`**|1.d4 Nf6 2.c4 g6                                |The King’s Indian Defence |
 
+----------
+> [!IMPORTANT]
+> Useful Links.
+>https://en.wikipedia.org/wiki/Chess_opening
+>https://www.chess.com/clubs/forum/view/wikipedia-list-of-chess-openings
+>https://www.365chess.com/eco.php
+>https://www.ficsgames.org/eco.html
+>https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_A
+>https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_B
+>https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_C
+>https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_D
+>https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_E
 [^1]: https://github.com/jamsahar/Documents/blob/main/ECO.md
