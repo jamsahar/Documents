@@ -200,7 +200,7 @@
 > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_C
 > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_D
 > * https://en.wikibooks.org/wiki/Chess_Opening_Theory/ECO_volume_E
-> * https://github.com/jamsahar/Documents/blob/main/ECO.md          <<<<---- It's me
+> * https://github.com/jamsahar/Documents/blob/main/ECO.md
 
 
 [^1]: https://github.com/jamsahar/Documents/blob/main/ECO.md
