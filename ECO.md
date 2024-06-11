@@ -100,6 +100,8 @@
 
 ------------------
 
+[www.chess.com](https://www.chess.com/clubs/forum/view/wikipedia-list-of-chess-openings)
+
 | ECO        |Moves                                           |Name                                         |
 |:-----------|:-----------------------------------------------|:--------------------------------------------|
 |**`A00`**   |                                                |Uncommon Openings: 1.g3 (Benko Opening), 1.Nc3 (Sleipner Opening), 1.a3 (Anderssen's Opening), 1.b4 (Sokolsky Opening), 1.g4 (Grob's Attack), 1.h3 (Basmanic Defence), 1.c3 (Saragossa Opening), 1.d3 (Mieses Opening), 1.e3 (French Attack), 1.h4 (Desprez Opening), 1.a4 (Ware Opening), 1.Nh3 (Amar Opening), 1.Na3 (Durkin's Attack), 1.f3 (Gedult's Opening)|
