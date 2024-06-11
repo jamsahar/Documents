@@ -127,9 +127,11 @@
 |**`A57-59`**|1.d4 Nf6 2.c4 c5 3.d5 b5                        |Benko-Volga Gambit                           |
 |**`A60-79`**|1.d4 Nf6 2.c4 c5 3.d5 e6                        |Modern Benoni                                |
 |**`A80-99`**|1.d4 f5                                         |The Dutch Defence                            |
+
 </details>
 <details>
 <summary>B00-B99</summary>
+
 | ECO        |Moves                                           |Name                     |
 |:-----------|:-----------------------------------------------|:------------------------|
 |**`B00`**   |1.e4 Nc6                                        |Irregular Asymmetrical Responses to 1. e4: 1...a6 (St. George's Defence), 1...b6 (Owens' Defence), 1...f6 (Barnes Defence), 1...h6 (Carr Defence), 1...Na6 (Lemming Defence), 1...Nc6 (Nimzowitsch Defence), 1...Nh6 (Adams Defence), 1...a5 (Cornstalk Defence), 1...b5 (Polish Gambit), 1...f5 (Fred Defence), 1...g5 (Borg Defence), 1...h5 (Goldsmith Defence)|
@@ -139,9 +141,11 @@
 |**`B07-09`**|1.e4 d6 2.d4 Nf6 3.Nc3 g6                       |The Pirc/Ufimtsev Defence|
 |**`B10-19`**|1.e4 c6                                         |The Caro-Kann Defence    |
 |**`B20-99`**|1.e4 c5                                         |The Sicilian Defence     |
+
 </details>
 <details>
 <summary>C00-C99</summary>
+
 | ECO        |Moves                                           |Name                                                                |
 |:-----------|:-----------------------------------------------|:-------------------------------------------------------------------|
 |**`C00-19`**|1.e4 e6                                         |The French Defence                                                  |
@@ -164,9 +168,11 @@
 |**`C60-79`**|1.e4 e5 2.Nf3 Nc6 3.Bb5                         |The Ruy Lopez                                                       |
 |**`C80-83`**|1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Nxe4 |Open Ruy Lopez                                                      |
 |**`C84-99`**|1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O  Be7 |Closed Ruy Lopez                                                    |
+
 </details>
 <details>
 <summary>D00-D99</summary>
+
 | ECO        |Moves                                           |Name                                                                                |
 |:-----------|:-----------------------------------------------|:-----------------------------------------------------------------------------------|
 |**`D00`**   |1.d4 d5 2.Bf4                                   |D00-09 The Queen’s Pawn Game, Mason Variation,Stonewall Attack,Hodgson Attack,Trompowsky,Blackmar-Diemer Gambit,Veresov Attack|
@@ -181,7 +187,9 @@
 |**`D30-69`**|1.d4 d5 2.c4 e6                                 |The Queen’s Gambit Declined (QGD)                                                   |
 |**`D70-79`**|1.d4 Nf6 2.c4 g6 3.Nf3 d5                       |Neo-Grünfeld                                                                        |
 |**`D80-99`**|1.d4 Nf6 2.c4 g6 3.Nc3 d5                       |Grünfeld Defence                                                                    |
+
 </details>
+
 <details>
 <summary>E00-E99</summary>
 | ECO        |Moves                                           |Name                      |
@@ -193,6 +201,7 @@
 |**`E12-19`**|1.d4 Nf6 2.c4 e6 3.Nf3 b6                       |The Queen’s Indian Defence|
 |**`E20-59`**|1.d4 Nf6 2.c4 e6 3.Nc3 Bb4                      |The Nimzo-Indian Defence  |
 |**`E60-99`**|1.d4 Nf6 2.c4 g6                                |The King’s Indian Defence |
+
 </details>
 
 ----------
