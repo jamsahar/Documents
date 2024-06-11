@@ -1,11 +1,10 @@
+<h1 align="center"><strong><em><ins>Encyclopaedia of Chess Openings</ins></em></strong></h1>
 <p align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Chess_Pieces_Sprite.svg/640px-Chess_Pieces_Sprite.svg.png"  width="640" height="213" border="1"/>
 </p>
 
 [The Ultimate Chess Openings Cheat Sheet](https://github.com/jamsahar/Documents/blob/main/ECO.md)
-<h1 align="center"><strong><em><ins>Encyclopaedia of Chess Openings</ins></em></strong></h1>
-
-# ECO Cheatsheet[^1]
+# ECO Cheatsheet [^1]
 
 * A00-03 Unusual White Opening Moves
 * A04-09 The Reti Opening
