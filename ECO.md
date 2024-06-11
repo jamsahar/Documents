@@ -5,6 +5,9 @@
 
 # Encyclopaedia of Chess Openings ECO Cheatsheet [^1]
 
+<details>
+<summary>B00-B99</summary>
+
 > [!IMPORTANT]
 > * A00-03 Unusual White Opening Moves
 > * A04-09 The Reti Opening
@@ -33,6 +36,7 @@
 > * E20-59 The Nimzo-Indian Defense
 > * E60-99 The King’s Indian Defense
 
+</details>
 ------------------
 
 [wikipedia.org](https://en.wikipedia.org/wiki/Chess_opening)
