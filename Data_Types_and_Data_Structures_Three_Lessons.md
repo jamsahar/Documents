@@ -1,1433 +1,1627 @@
-# Data Types & Data Structures --- سه درس جامع
+# 📘 راهنمای جامع انواع داده (Data Types) در زبان‌های برنامه‌نویسی
 
-## فهرست عناوین
+> **نسخه:** 1.0  
+> **تاریخ:** ۱۲ سپتامبر ۲۰۲۶  
+> **زبان‌های پوشش‌داده‌شده:** Python, JavaScript/TypeScript, Java, C#, C++, C, Go, Rust, Kotlin, Swift, Dart, Ruby, PHP, Scala, Erlang, Elixir, Zig, Carbon, Gleam, Haskell
 
-1.  [درس اول --- انواع Data Type و Data
-    Structure](#درس-اول--انواع-data-type-و-data-structure)
-    1.  [دسته‌بندی اصلی Data Typeها](#دسته‌بندی-اصلی-data-typeها)
-    2.  [انواع عددی](#انواع-عددی)
-    3.  [Boolean و Character و String](#boolean-و-character-و-string)
-    4.  [Collectionها](#collectionها)
-    5.  [Array، List و Vector](#array-list-و-vector)
-    6.  [Tuple](#tuple)
-    7.  [Set](#set)
-    8.  [Map / Dictionary](#map--dictionary)
-    9.  [Object، Class، Struct و Record](#object-class-struct-و-record)
-    10. [Enum](#enum)
-    11. [Binary Data](#binary-data)
-    12. [Optional، Union و Variant](#optional-union-و-variant)
-    13. [Function، Iterator و Generator](#function-iterator-و-generator)
-    14. [Stack، Queue و Deque](#stack-queue-و-deque)
-    15. [Linked List، Tree، Heap، Graph و
-        Trie](#linked-list-tree-heap-graph-و-trie)
-    16. [Pointer و Reference](#pointer-و-reference)
-    17. [Date/Time، UUID و Big Integer](#datetime-uuid-و-big-integer)
-    18. [Data Type در زبان‌های متداول](#data-type-در-زبانهای-متداول)
-    19. [Data Type در برابر Data
-        Structure](#data-type-در-برابر-data-structure)
-    20. [داده‌های تخصصی AI/LLM](#دادههای-تخصصی-aillm)
-2.  [درس دوم --- مقایسه عمیق و مدل‌سازی
-    داده](#درس-دوم--مقایسه-عمیق-و-مدل‌سازی-داده)
-    1.  [Master List](#master-list)
-    2.  [مقایسه Array/List/Tuple](#مقایسه-arraylisttuple)
-    3.  [Mutable و Immutable](#mutable-و-immutable)
-    4.  [Ordered/Unordered و
-        Homogeneous/Heterogeneous](#orderedunordered-و-homogeneousheterogeneous)
-    5.  [Generics و Type Alias](#generics-و-type-alias)
-    6.  [Optional، Result و Async Types](#optional-result-و-async-types)
-    7.  [Binary Types و Serialization](#binary-types-و-serialization)
-    8.  [Tensor، Embedding و AI Data](#tensor-embedding-و-ai-data)
-    9.  [Message، Tool Call و Agent
-        State](#message-tool-call-و-agent-state)
-    10. [مدل داده RAG](#مدل-داده-rag)
-    11. [نقشه یادگیری](#نقشه-یادگیری)
-3.  [درس سوم --- مباحث حرفه‌ای و تکمیلی](#درس-سوم--مباحث-حرفهای-و-تکمیلی)
-    1.  [Type System](#type-system)
-    2.  [Memory Model](#memory-model)
-    3.  [Mutability، Copy و Sharing](#mutability-copy-و-sharing)
-    4.  [Equality، Identity و Hashing](#equality-identity-و-hashing)
-    5.  [Type Conversion](#type-conversion)
-    6.  [Generics و Advanced Types](#generics-و-advanced-types)
-    7.  [Complexity و انتخاب
-        Collection](#complexity-و-انتخاب-collection)
-    8.  [Serialization و Data
-        Interchange](#serialization-و-data-interchange)
-    9.  [Database Data Types](#database-data-types)
-    10. [Concurrency و Data Safety](#concurrency-و-data-safety)
-    11. [Distributed Systems Data](#distributed-systems-data)
-    12. [AI/LLM Data Models](#aillm-data-models)
-    13. [RAG Data Models](#rag-data-models)
-    14. [زنجیره کامل دانش](#زنجیره-کامل-دانش)
+---
 
-------------------------------------------------------------------------
+## فهرست مطالب
 
-# درس اول --- انواع Data Type و Data Structure
+1. [مقدمه و دسته‌بندی انواع داده](#1-مقدمه-و-دسته-بندی-انواع-داده)
+2. [انواع داده اولیه (Primitive Types)](#2-انواع-داده-اولیه)
+3. [انواع داده مرکب (Composite Types)](#3-انواع-داده-مرکب)
+4. [مجموعه‌ها (Collections)](#4-مجموعه‌ها)
+5. [بررسی زبان‌به‌زبان](#5-بررسی-زبانبه-زبان)
+6. [جدول مقایسه‌ای جامع](#6-جدول-مقایسه‌ای-جامع)
+7. [جمع‌بندی و توصیه‌ها](#7-جمع‌بندی-و-توصیه‌ها)
 
-## دسته‌بندی اصلی Data Typeها
+---
 
-Data Type مشخص می‌کند یک مقدار چه نوع داده‌ای است، چه عملیاتی روی آن مجاز
-است و معمولاً چگونه در حافظه نمایش داده می‌شود.
+## 1. مقدمه و دسته‌بندی انواع داده
 
-گروه‌های مهم:
+**نوع داده (Data Type)** مشخص می‌کند که یک متغیر چه نوع مقداری را می‌تواند نگهداری کند، چه عملیاتی روی آن مجاز است و چقدر حافظه اشغال می‌کند.
 
--   Numeric
--   Boolean
--   Character
--   String
--   Array
--   List
--   Vector
--   Tuple
--   Set
--   Map / Dictionary
--   Object / Class
--   Struct
--   Record
--   Enum
--   Binary / Bytes
--   Optional / Nullable
--   Union / Variant
--   Function / Lambda
--   Iterator / Generator
--   Date / Time
--   UUID
--   Pointer / Reference
--   Void
--   Any / Dynamic
--   Complex Number
--   Big Integer
+### دسته‌بندی کلی
 
-## انواع عددی
-
-### Integer
-
-اعداد صحیح مانند `-10`, `0`, `42`.
-
-### Float / Double
-
-اعداد اعشاری با دقت شناور.
-
-### Decimal
-
-برای محاسبات دقیق اعشاری، به‌خصوص مالی.
-
-### Big Integer
-
-برای اعداد صحیح بسیار بزرگ.
-
-### Complex
-
-اعداد مختلط مانند `3 + 4j`.
-
-نکته: نمایش اعشاری دودویی می‌تواند باعث خطاهای ظاهری شود؛ مثلاً در
-JavaScript:
-
-``` javascript
-const a = 0.2 + 0.4;
-const b = 0.6;
-console.log(a, b, a === b);
+```
+┌─────────────────────────────────────────────────────────┐
+│                   انواع داده (Data Types)               │
+├────────────────────┬────────────────────┬───────────────┤
+│   Primitive        │   Composite        │  Collections  │
+│   (اولیه)          │   (مرکب)           │  (مجموعه‌ها)   │
+├────────────────────┼────────────────────┼───────────────┤
+│ - Integer          │ - Tuple            │ - Array/List  │
+│ - Float/Double     │ - Record/Struct    │ - Map/Dict    │
+│ - Boolean          │ - Class/Object     │ - Set         │
+│ - Character        │ - Union/Variant    │ - Queue/Stack │
+│ - String           │ - Enum             │ - Tree/Graph  │
+│ - Void/Unit        │ - Nullable         │               │
+└────────────────────┴────────────────────┴───────────────┘
 ```
 
-برای محاسبات حساس، Decimal یا روش‌های عددی مناسب استفاده کنید.
+---
 
-## Boolean و Character و String
+## 2. انواع داده اولیه
 
--   `Boolean`: معمولاً `true/false`
--   `Character`: یک کاراکتر
--   `String`: دنباله‌ای از کاراکترها
+### 2.1 اعداد صحیح (Integer)
 
-مثال Python:
+| زبان | نوع | اندازه | محدوده |
+|------|------|--------|--------|
+| **C** | `int`, `short`, `long`, `long long` | 16–64 بیت | بسته به پلتفرم |
+| **C++** | `int`, `int8_t`, `int16_t`, `int32_t`, `int64_t` | دقیق | `-2^(n-1)` تا `2^(n-1)-1` |
+| **Java** | `byte`, `short`, `int`, `long` | 8/16/32/64 بیت | ثابت |
+| **C#** | `sbyte`, `short`, `int`, `long` | 8/16/32/64 بیت | ثابت |
+| **Go** | `int`, `int8`, `int16`, `int32`, `int64` | متغیر/ثابت | - |
+| **Rust** | `i8`, `i16`, `i32`, `i64`, `i128`, `isize` | 8–128 بیت | ثابت |
+| **Kotlin** | `Byte`, `Short`, `Int`, `Long` | 8/16/32/64 بیت | ثابت |
+| **Swift** | `Int8`, `Int16`, `Int32`, `Int64`, `Int` | متغیر/ثابت | - |
+| **Python** | `int` | دلخواه (arbitrary precision) | نامحدود |
+| **JavaScript** | `Number` (IEEE 754) / `BigInt` | 53/دلخواه بیت | - |
+| **TypeScript** | `number`, `bigint` | - | - |
+| **Ruby** | `Integer` | دلخواه | نامحدود |
+| **PHP** | `int` | 64 بیت (معمولاً) | - |
+| **Dart** | `int` | 64 بیت | - |
+| **Scala** | `Byte`, `Short`, `Int`, `Long`, `BigInt` | - | - |
+| **Haskell** | `Int`, `Integer` | ماشین/دلخواه | - |
+| **Erlang/Elixir** | عدد صحیح | دلخواه | نامحدود |
+| **Zig** | `i8`, `i16`, `i32`, `i64`, `i128` | دقیق | ثابت |
+| **Carbon** | `i8`, `i16`, `i32`, `i64` | دقیق | ثابت |
+| **Gleam** | `Int` | دلخواه | نامحدود |
 
-``` python
-active = True
-letter = "A"
-name = "Alice"
+### 2.2 اعداد اعشاری (Floating Point)
+
+| زبان | نوع | دقت | استاندارد |
+|------|------|------|-----------|
+| **C/C++** | `float`, `double`, `long double` | 32/64/80+ بیت | IEEE 754 |
+| **Java** | `float`, `double` | 32/64 بیت | IEEE 754 |
+| **C#** | `float`, `double`, `decimal` | 32/64/128 بیت | `decimal` برای پول |
+| **Go** | `float32`, `float64` | 32/64 بیت | IEEE 754 |
+| **Rust** | `f32`, `f64` | 32/64 بیت | IEEE 754 |
+| **Swift** | `Float`, `Double`, `Float80` | 32/64/80 بیت | - |
+| **Kotlin** | `Float`, `Double` | 32/64 بیت | IEEE 754 |
+| **Python** | `float` | 64 بیت | IEEE 754 |
+| **JavaScript** | `Number` | 64 بیت | IEEE 754 |
+| **Ruby** | `Float` | 64 بیت | IEEE 754 |
+| **PHP** | `float` | پلتفرم‌وابسته | - |
+| **Dart** | `double` | 64 بیت | IEEE 754 |
+| **Scala** | `Float`, `Double`, `BigDecimal` | - | - |
+| **Haskell** | `Float`, `Double`, `Rational` | - | دقیق |
+| **Elixir** | `Float` | 64 بیت | IEEE 754 |
+| **Zig** | `f16`, `f32`, `f64`, `f80`, `f128` | دقیق | - |
+| **Carbon** | `f16`, `f32`, `f64`, `f128`, `f256` | دقیق | - |
+| **Gleam** | `Float` | 64 بیت | IEEE 754 |
+
+### 2.3 بولین (Boolean)
+
+- **C**: `bool` (از C99، در `<stdbool.h>`) - در واقع `int` با مقادیر 0/1
+- **C++**: `bool` - نوع مستقل
+- **Java/C#/Kotlin**: `boolean` / `bool`
+- **Go**: `bool`
+- **Rust**: `bool`
+- **Swift**: `Bool`
+- **Python**: `bool` (زیرکلاس `int`)
+- **JavaScript**: `boolean`
+- **Ruby**: `TrueClass` / `FalseClass`
+- **PHP**: `bool`
+- **Dart**: `bool`
+- **Scala**: `Boolean`
+- **Haskell**: `Bool` (`True` / `False`)
+- **Erlang/Elixir**: `true` / `false` (اتم‌های خاص)
+- **Zig/Carbon/Gleam**: `bool`
+
+### 2.4 کاراکتر و رشته (Character & String)
+
+| زبان | کاراکتر | رشته | ویژگی |
+|------|----------|------|--------|
+| **C** | `char` (1 بایت) | `char*` / آرایه | بدون نوع اختصاصی رشته |
+| **C++** | `char`, `wchar_t`, `char16_t`, `char32_t` | `std::string`, `std::string_view`, `std::wstring` | UTF-8/16/32 |
+| **Java** | `char` (UTF-16, 2 بایت) | `String` (غیرقابل تغییر) | - |
+| **C#** | `char` (UTF-16) | `string` | غیرقابل تغییر |
+| **Go** | `rune` (alias `int32`) | `string` (UTF-8) | غیرقابل تغییر |
+| **Rust** | `char` (4 بایت, Unicode Scalar) | `String`, `&str` | UTF-8 |
+| **Swift** | `Character` | `String` | Unicode grapheme cluster |
+| **Kotlin** | `Char` (UTF-16) | `String` | - |
+| **Python** | - (کاراکتر مستقل ندارد) | `str` | Unicode، غیرقابل تغییر |
+| **JavaScript** | - | `string` (UTF-16) | غیرقابل تغییر |
+| **Ruby** | - | `String` | قابل تغییر، Encoding-aware |
+| **PHP** | `string[0]` | `string` | بایت-محور |
+| **Dart** | - | `String` (UTF-16) | غیرقابل تغییر |
+| **Scala** | `Char` | `String` | - |
+| **Haskell** | `Char` | `String` = `[Char]` | لیستی از کاراکتر |
+| **Elixir** | - | `String` (UTF-8 binaries) | - |
+| **Erlang** | - | list of integers / binaries | - |
+| **Zig** | `u8` | `[]const u8`, `[]u8` | UTF-8 |
+| **Carbon** | - | `String` | UTF-8 |
+| **Gleam** | - | `String` | UTF-8 |
+
+---
+
+## 3. انواع داده مرکب
+
+### 3.1 تاپل (Tuple)
+
+تاپل مجموعه‌ای **مرتّب و غیرقابل تغییر** از عناصر با انواع مختلف است.
+
+```python
+# Python
+point = (3, 4)
+person: tuple[str, int, bool] = ("Ali", 30, True)
+named = collections.namedtuple("Point", ["x", "y"])
 ```
 
-در برخی زبان‌ها Character نوع مستقل دارد؛ در برخی دیگر String تک‌کاراکتری
-است.
+```javascript
+// JavaScript - تاپل اختصاصی ندارد، از آرایه استفاده می‌شود
+const point = [3, 4];
 
-## Collectionها
-
-Collection ساختاری برای نگهداری چند مقدار است.
-
-انواع متداول:
-
--   Array
--   List
--   Vector
--   Set
--   Map
--   Tuple
--   Stack
--   Queue
--   Deque
-
-انتخاب Collection باید بر اساس نیازهای دسترسی، جست‌وجو، درج، حذف، ترتیب و
-حافظه انجام شود.
-
-## Array، List و Vector
-
-### Array
-
-معمولاً مجموعه‌ای با اندیس و اندازه مشخص یا ساختار متراکم.
-
-``` text
-[10, 20, 30, 40]
+// TypeScript
+const point: [number, number] = [3, 4];
+const person: [string, number, boolean] = ["Ali", 30, true];
 ```
 
-### List
-
-در بسیاری از زبان‌ها مجموعه‌ای انعطاف‌پذیر و معمولاً قابل تغییر.
-
-### Vector
-
-در بسیاری از زبان‌ها آرایه پویا است؛ در AI نیز Vector معنای دیگری به‌عنوان
-بردار عددی دارد.
-
-بنابراین «Vector» می‌تواند هم Data Structure و هم AI Data Representation
-باشد.
-
-## Tuple
-
-Tuple مجموعه‌ای مرتب است که در بسیاری از زبان‌ها برای داده‌های ثابت یا
-چندتایی استفاده می‌شود.
-
-Python:
-
-``` python
-point = (10, 20)
-person = ("Ali", 30, True)
+```java
+// Java - قبل از JDK 21: کلاس Record یا کتابخانه
+record Point(int x, int y) {}
+// JDK 21+: Pair/Tuple از طریق الگوها
 ```
 
-مزایا:
-
--   ساختار مرتب
--   مناسب برای چند مقدار مرتبط
--   در Python تغییرناپذیر
-
-## Set
-
-Set مجموعه‌ای از مقادیر بدون تکرار است.
-
-``` python
-tags = {"ai", "rag", "python"}
+```csharp
+// C#
+var point = (3, 4);
+var person = (Name: "Ali", Age: 30, Active: true);
+// System.ValueTuple<T1, T2, ...>
 ```
 
-کاربردها:
-
--   حذف Duplicate
--   عضویت
--   Union
--   Intersection
--   Difference
-
-## Map / Dictionary
-
-Map رابطه Key → Value است.
-
-Python:
-
-``` python
-user = {
-    "id": 1001,
-    "name": "Ali",
-    "active": True
-}
+```cpp
+// C++
+#include <tuple>
+auto t = std::make_tuple(3, 4.5, "hello");
+std::tuple<int, double, std::string> t2{3, 4.5, "hello"};
 ```
 
-JavaScript:
+```rust
+// Rust
+let point: (i32, i32) = (3, 4);
+let mixed: (i32, f64, &str) = (3, 4.5, "hello");
+```
 
-``` javascript
-const user = {
-  id: 1001,
-  name: "Ali",
-  active: true
+```go
+// Go - تاپل ندارد، چندمقدار بازگشتی دارد
+func divide(a, b int) (int, int) { return a / b, a % b }
+```
+
+```swift
+// Swift
+let point: (Int, Int) = (3, 4)
+let labeled: (x: Int, y: Int) = (3, 4)
+```
+
+```kotlin
+// Kotlin
+val pair = Pair(1, "one")
+val triple = Triple(1, "one", true)
+// برای بیش از 3 عنصر: data class
+```
+
+```dart
+// Dart - تاپل ندارد، از Record (Dart 3+) استفاده می‌شود
+var point = (3, 4);
+var person = (name: "Ali", age: 30);
+```
+
+```ruby
+# Ruby
+point = [3, 4]
+# یا با OpenStruct
+```
+
+```php
+// PHP - تاپل ندارد
+$point = [3, 4];
+// PHP 8.1+: readonly class
+```
+
+```scala
+// Scala
+val point = (3, 4)
+val tuple5 = (1, 2, 3, 4, 5) // تا 22 عنصر
+```
+
+```haskell
+-- Haskell
+point = (3, 4)
+mixed = (3, 4.5, "hello")
+```
+
+```erlang
+% Erlang
+Point = {3, 4}.
+Person = {person, "Ali", 30}. % تاپل برچسب‌دار
+```
+
+```elixir
+# Elixir
+point = {3, 4}
+person = {"Ali", 30, true}
+```
+
+```zig
+// Zig - تاپل دارد (از نسخه‌های اخیر)
+const point = .{ @as(i32, 3), @as(i32, 4) };
+```
+
+```carbon
+// Carbon
+var point: (i32, i32) = (3, 4);
+```
+
+```gleam
+// Gleam
+let point = #(3, 4)
+let person = #("Ali", 30, True)
+```
+
+### 3.2 ساختار / رکورد (Struct / Record)
+
+```c
+// C
+struct Point {
+    int x;
+    int y;
 };
 ```
 
-کاربردها:
-
--   Lookup
--   Configuration
--   Metadata
--   JSON-like data
--   Indexing
-
-## Object، Class، Struct و Record
-
-### Object
-
-نمونه‌ای از یک نوع/کلاس که داده و رفتار را می‌تواند در خود داشته باشد.
-
-### Class
-
-تعریف ساختار و رفتار Object.
-
-### Struct
-
-معمولاً نوع داده‌ای سبک برای نگهداری چند فیلد.
-
-### Record
-
-برای داده‌های ساخت‌یافته، مخصوصاً داده‌هایی که هویت آن‌ها بیشتر بر اساس
-مقادیر فیلدهاست.
-
-## Enum
-
-Enum مجموعه‌ای از مقادیر نام‌دار محدود است.
-
-``` text
-Status = NEW | RUNNING | DONE | FAILED
+```cpp
+// C++
+struct Point {
+    int x, y;
+};
+// یا class
 ```
 
-کاربرد:
-
--   State
--   Status
--   Mode
--   Category
--   Permissions
-
-## Binary Data
-
-برای فایل و داده خام:
-
--   bytes
--   byte array
--   buffer
--   blob
--   binary stream
-
-مثال Python:
-
-``` python
-data = b"hello"
+```rust
+// Rust
+struct Point {
+    x: i32,
+    y: i32,
+}
+// Tuple struct
+struct Pair(i32, i32);
+// Unit struct
+struct Marker;
 ```
 
-## Optional، Union و Variant
-
-### Optional / Nullable
-
-یک مقدار ممکن است وجود داشته باشد یا نداشته باشد:
-
-``` text
-Optional[String]
-```
-
-### Union
-
-یک مقدار می‌تواند یکی از چند نوع باشد:
-
-``` text
-String | Integer
-```
-
-### Variant
-
-نوعی container برای چند شکل داده که در هر لحظه یکی از حالت‌ها را نگه
-می‌دارد.
-
-## Function، Iterator و Generator
-
-Function نیز در زبان‌های مدرن می‌تواند یک مقدار قابل نگهداری و ارسال باشد.
-
-``` python
-def add(a, b):
-    return a + b
-```
-
-### Iterator
-
-داده‌ها را مرحله‌به‌مرحله ارائه می‌کند.
-
-### Generator
-
-برای تولید lazy داده‌ها، بدون ساخت کل مجموعه در حافظه.
-
-``` python
-def numbers():
-    for i in range(10):
-        yield i
-```
-
-## Stack، Queue و Deque
-
-### Stack
-
-LIFO:
-
-``` text
-Last In → First Out
-```
-
-عملیات اصلی:
-
--   push
--   pop
--   peek
-
-### Queue
-
-FIFO:
-
-``` text
-First In → First Out
-```
-
-عملیات:
-
--   enqueue
--   dequeue
-
-### Deque
-
-Double-ended queue؛ افزودن و حذف از هر دو سمت.
-
-## Linked List، Tree، Heap، Graph و Trie
-
-### Linked List
-
-هر Node به Node بعدی یا قبلی اشاره دارد.
-
-### Tree
-
-ساختار سلسله‌مراتبی.
-
-نمونه‌ها:
-
--   Binary Tree
--   BST
--   AVL Tree
--   B-Tree
-
-### Heap
-
-برای دسترسی سریع به Minimum/Maximum و پیاده‌سازی Priority Queue.
-
-### Graph
-
-مجموعه‌ای از Node و Edge.
-
-کاربرد:
-
--   شبکه‌ها
--   Dependency
--   Knowledge Graph
--   Routing
-
-### Trie
-
-ساختار درختی برای Prefix Search و داده‌های متنی.
-
-## Pointer و Reference
-
-### Pointer
-
-آدرس حافظه را نگه می‌دارد و در زبان‌هایی مانند C/C++ اهمیت زیادی دارد.
-
-### Reference
-
-به یک Object یا مقدار دیگر ارجاع می‌دهد و معمولاً abstraction بالاتری از
-Pointer دارد.
-
-## Date/Time، UUID و Big Integer
-
-### Date/Time
-
-برای:
-
--   تاریخ
--   زمان
--   Timestamp
--   Time Zone
--   Duration
-
-### UUID
-
-شناسه تقریباً یکتا برای Objectها، Sessionها، Requestها و Recordها.
-
-### Big Integer
-
-برای اعداد بزرگ‌تر از محدوده معمول Integer.
-
-## Data Type در زبان‌های متداول
-
-  ----------------------------------------------------------------------------------------------------------------------------------------------------
-  مفهوم      Python              JavaScript/TS    Java           C#                   C++                        Go                 Rust
-  ---------- ------------------- ---------------- -------------- -------------------- -------------------------- ------------------ ------------------
-  Integer    int                 number/bigint    int/long       int/long             int/long                   int/int64          i32/i64
-
-  Float      float               number           float/double   float/double         float/double               float32/64         f32/f64
-
-  Boolean    bool                boolean          boolean        bool                 bool                       bool               bool
-
-  String     str                 string           String         string               string                     string             String/&str
-
-  Array      list/array          Array            T\[\]          T\[\]                T\[\]                      \[N\]T             \[T;N\]
-
-  Dynamic    list                Array            ArrayList      List`<T>`{=html}     vector                     \[\]T              Vec`<T>`{=html}
-  List                                                                                                                              
-
-  Tuple      tuple               tuple in TS      record-like /  ValueTuple           tuple                      struct             tuple
-                                                  custom                                                                            
-
-  Set        set                 Set              Set            HashSet              set                        map\[T\]struct{}   HashSet
-
-  Map        dict                Map/object       Map            Dictionary           map/unordered_map          map                HashMap
-
-  Optional   None                null/undefined   Optional       nullable             optional                   pointer/value      Option
-                                                                                                                 pattern            
-
-  Result     exceptions/custom   Promise/result   custom         Result-like/custom   expected                   error              Result
-                                 patterns                                                                                           
-
-  Binary     bytes               Uint8Array       byte\[\]       byte\[\]             vector`<uint8_t>`{=html}   \[\]byte           Vec`<u8>`{=html}
-  ----------------------------------------------------------------------------------------------------------------------------------------------------
-
-## Data Type در برابر Data Structure
-
-**Data Type** بیشتر مشخص می‌کند «چه نوع مقداری» داریم.
-
-**Data Structure** مشخص می‌کند «چگونه چند داده را سازمان‌دهی و نگهداری
-کنیم».
-
-مثال:
-
-``` text
-string
-    ↓
-List[string]
-    ↓
-Document
-    ↓
-RAG Index
-```
-
-## داده‌های تخصصی AI/LLM
-
-در سیستم‌های AI با انواع داده جدیدی مواجه می‌شویم:
-
--   Token
--   Token ID
--   Tensor
--   Vector
--   Embedding
--   Logits
--   Probability Distribution
--   Attention Mask
--   Message
--   Tool Call
--   Tool Result
--   Document
--   Chunk
--   Metadata
--   Knowledge Graph Node/Edge
--   Agent State
--   Memory Item
-
-------------------------------------------------------------------------
-
-# درس دوم --- مقایسه عمیق و مدل‌سازی داده
-
-## Master List
-
-فهرست عملی انواع مهم:
-
-``` text
-Primitive
-├── Integer
-├── Float
-├── Decimal
-├── Boolean
-├── Character
-└── String
-
-Collections
-├── Array
-├── List
-├── Vector
-├── Tuple
-├── Set
-├── Map
-├── Stack
-├── Queue
-└── Deque
-
-Structures
-├── Linked List
-├── Tree
-├── Heap
-├── Graph
-├── Trie
-└── Hash Table
-
-Advanced Types
-├── Enum
-├── Optional
-├── Nullable
-├── Union
-├── Variant
-├── Result
-├── Generic
-└── Function Type
-
-System Types
-├── Pointer
-├── Reference
-├── Iterator
-├── Generator
-├── Future/Promise/Task
-└── Coroutine
-
-AI Types
-├── Token
-├── Tensor
-├── Vector
-├── Embedding
-├── Logits
-├── Attention Mask
-├── Message
-├── Tool Call
-├── Agent State
-└── Memory
-```
-
-## مقایسه Array/List/Tuple
-
-  ویژگی        Array                       List           Tuple
-  ------------ --------------------------- -------------- -----------------
-  ترتیب        معمولاً دارد                 دارد           دارد
-  تغییرپذیری   وابسته به زبان              معمولاً دارد    اغلب ندارد
-  اندازه       ثابت/محدود در برخی زبان‌ها   پویا           ثابت
-  کاربرد       داده‌های indexed             مجموعه عمومی   چند مقدار مرتبط
-  مثال         `int[10]`                   `[1,2,3]`      `(x,y)`
-
-## Mutable و Immutable
-
-### Mutable
-
-بعد از ساخت قابل تغییر است.
-
-``` python
-items = [1, 2, 3]
-items.append(4)
-```
-
-### Immutable
-
-بعد از ساخت قابل تغییر نیست.
-
-``` python
-point = (10, 20)
-```
-
-مزایای Immutability:
-
--   Thread Safety بهتر
--   Predictability
--   کاهش Side Effect
--   مناسب برای Functional Programming
--   مناسب برای Cache و Sharing
-
-## Ordered/Unordered و Homogeneous/Heterogeneous
-
-### Ordered
-
-ترتیب عناصر اهمیت دارد.
-
-### Unordered
-
-ترتیب عنصرها تضمین اصلی ساختار نیست.
-
-### Homogeneous
-
-همه عناصر یک نوع دارند.
-
-### Heterogeneous
-
-عناصر می‌توانند انواع متفاوت داشته باشند.
-
-Python:
-
-``` python
-data = [10, "AI", True]
-```
-
-## Generics و Type Alias
-
-Generic امکان نوشتن ساختارهای type-safe و reusable را فراهم می‌کند.
-
-مثال مفهومی:
-
-``` text
-List[T]
-Map[K, V]
-Result[T, E]
-```
-
-Type Alias برای نام‌گذاری نوع‌های پیچیده:
-
-``` text
-UserId = UUID
-Embedding = Vector[Float]
-```
-
-## Optional، Result و Async Types
-
-### Optional
-
-برای «مقدار ممکن است وجود نداشته باشد».
-
-### Result
-
-برای مدل‌سازی موفقیت/خطا به‌صورت explicit:
-
-``` text
-Result[Success, Error]
-```
-
-### Future / Promise / Task
-
-نماینده نتیجه‌ای که در آینده آماده می‌شود.
-
-کاربرد:
-
--   Async I/O
--   API Calls
--   Agent execution
--   Parallel processing
-
-### Coroutine
-
-واحد اجرای قابل suspend/resume، بسیار مهم در برنامه‌نویسی asynchronous.
-
-## Binary Types و Serialization
-
-داده برای انتقال یا ذخیره‌سازی معمولاً Serialize می‌شود.
-
-فرمت‌ها:
-
--   JSON
--   XML
--   YAML
--   CSV
--   MessagePack
--   Protocol Buffers
--   Avro
-
-مثال:
-
-``` text
-Object
-  ↓ serialize
-JSON / Protobuf
-  ↓ transport
-Network
-  ↓ deserialize
-Object
-```
-
-## Tensor، Embedding و AI Data
-
-### Tensor
-
-آرایه چندبعدی از داده‌ها.
-
-``` text
-Scalar  = 0 dimension
-Vector  = 1 dimension
-Matrix  = 2 dimensions
-Tensor  = N dimensions
-```
-
-Tensor معمولاً همراه Shape و Data Type تعریف می‌شود:
-
-``` text
-Tensor<float32>
-shape = [batch, sequence, hidden]
-```
-
-### Embedding
-
-بردار عددی که معنای یک Entity را در فضای برداری نمایش می‌دهد.
-
-``` text
-text → embedding model → [0.12, -0.03, ...]
-```
-
-### Logits
-
-امتیازهای خام مدل قبل از تبدیل به Probability.
-
-### Attention Mask
-
-مشخص می‌کند مدل به کدام موقعیت‌ها توجه کند.
-
-## Message، Tool Call و Agent State
-
-### Message
-
-در سیستم‌های LLM معمولاً شامل:
-
-``` text
-role
-content
-metadata
-```
-
-Roleها می‌توانند شامل:
-
--   system
--   user
--   assistant
--   tool
-
-### Tool Call
-
-``` text
-tool_name
-arguments
-call_id
-```
-
-### Tool Result
-
-``` text
-call_id
-result
-status
-metadata
-```
-
-### Agent State
-
-نمونه مفهومی:
-
-``` text
-AgentState {
-    session_id
-    messages
-    current_goal
-    context
-    memory
-    tool_results
-    metadata
+```go
+// Go
+type Point struct {
+    X, Y int
 }
 ```
 
-## مدل داده RAG
-
-یک مدل معمول RAG:
-
-``` text
-Document
-├── id
-├── title
-├── source
-├── text
-├── metadata
-└── chunks
-
-Chunk
-├── id
-├── document_id
-├── text
-├── position
-├── metadata
-└── embedding
-
-Vector Record
-├── chunk_id
-├── embedding
-├── metadata
-└── payload
-
-Retrieval Result
-├── chunk
-├── similarity_score
-└── rank
-```
-
-### Knowledge Graph
-
-``` text
-Node
-├── id
-├── type
-└── properties
-
-Edge
-├── source
-├── target
-├── relation
-└── properties
-```
-
-## نقشه یادگیری
-
-برای تسلط حرفه‌ای:
-
-``` text
-Primitive Types
-      ↓
-Collections
-      ↓
-Data Structures
-      ↓
-Algorithms
-      ↓
-Complexity
-      ↓
-Type System
-      ↓
-Memory Model
-      ↓
-Generics
-      ↓
-Serialization
-      ↓
-Database Types
-      ↓
-Concurrency
-      ↓
-Distributed Data
-      ↓
-AI Data Types
-      ↓
-RAG Data Models
-      ↓
-Agent State & Memory
-```
-
-------------------------------------------------------------------------
-
-# درس سوم --- مباحث حرفه‌ای و تکمیلی
-
-## Type System
-
-Type System مجموعه قواعدی است که مشخص می‌کند چه نوع‌هایی وجود دارند و چه
-عملیاتی بین آن‌ها مجاز است.
-
-### Static Typing
-
-نوع‌ها در زمان کامپایل بررسی می‌شوند.
-
-نمونه:
-
--   Java
--   C#
--   C++
--   Rust
--   Go
-
-### Dynamic Typing
-
-نوع مقدار در Runtime تعیین/بررسی می‌شود.
-
-نمونه:
-
--   Python
--   JavaScript
--   Ruby
-
-### Strong vs Weak Typing
-
-Strong Typing معمولاً تبدیل‌های ناخواسته را محدودتر می‌کند؛ Weak Typing
-ممکن است coercion بیشتری انجام دهد.
-
-### Type Inference
-
-کامپایلر نوع را از مقدار یا expression استنتاج می‌کند.
-
-### Type Safety
-
-هدف این است که عملیات ناسازگار نوعی قبل از ایجاد خطا شناسایی شوند.
-
-### Nominal vs Structural Typing
-
--   **Nominal:** سازگاری نوع بر اساس نام/اعلان نوع
--   **Structural:** سازگاری بر اساس شکل و اعضای نوع
-
-## Memory Model
-
-### Stack
-
-برای داده‌های با lifetime و ساختار اجرای مناسب؛ معمولاً سریع و مدیریت آن
-ساده است.
-
-### Heap
-
-برای داده‌های dynamic و Objectهایی با lifetime انعطاف‌پذیر.
-
-### Value vs Reference
-
--   Value: خود مقدار منتقل می‌شود.
--   Reference: ارجاع به Object/Storage منتقل می‌شود.
-
-### Object Lifetime
-
-چرخه حیات یک Object:
-
-``` text
-Allocate
-   ↓
-Initialize
-   ↓
-Use
-   ↓
-Release / Garbage Collection
-```
-
-### Garbage Collection
-
-در زبان‌هایی مانند Java، C# و JavaScript بخش مهمی از مدیریت حافظه خودکار
-است.
-
-### Ownership و Borrowing
-
-Rust با Ownership، Borrowing و Lifetime کنترل بسیار دقیقی بر حافظه ارائه
-می‌دهد.
-
-## Mutability، Copy و Sharing
-
-موضوعات مهم:
-
--   Mutable
--   Immutable
--   Shallow Copy
--   Deep Copy
--   Clone
--   Reference Sharing
--   Copy-on-Write
-
-### Shallow Copy
-
-ساختار سطحی کپی می‌شود ولی References داخلی ممکن است مشترک بمانند.
-
-### Deep Copy
-
-ساختار و داده‌های تو در تو نیز کپی می‌شوند.
-
-این تفاوت در Python، JavaScript و زبان‌های Object-Oriented بسیار مهم است.
-
-## Equality، Identity و Hashing
-
-سه مفهوم را از هم جدا کنید:
-
-### Value Equality
-
-آیا دو مقدار محتوای برابر دارند؟
-
-### Reference Equality
-
-آیا دو Reference به یک Object اشاره می‌کنند؟
-
-### Identity
-
-آیا خود Object یکی است؟
-
-### Hashing
-
-تبدیل یک مقدار به Hash برای ساختارهایی مانند Hash Table/Dictionary.
-
-برای Keyهای Hashable معمولاً باید رابطه منطقی بین Equality و Hash برقرار
-باشد.
-
-## Type Conversion
-
-انواع تبدیل:
-
--   Implicit Conversion
--   Explicit Cast
--   Parsing
--   Coercion
--   Serialization
--   Deserialization
-
-مثال مفهومی:
-
-``` text
-"123"
-  ↓ parse
-123
-  ↓ convert
-123.0
-```
-
-نکته مهم: تبدیل نوع با Serialization یکی نیست. Serialization معمولاً برای
-تبدیل یک Object به representation قابل ذخیره/انتقال انجام می‌شود.
-
-## Generics و Advanced Types
-
-موضوعات حرفه‌ای:
-
--   Generic Type
--   Type Parameter
--   Generic Constraint
--   Union Type
--   Intersection Type
--   Optional Type
--   Sum Type
--   Product Type
--   Algebraic Data Type
--   Type Alias
--   Pattern Matching
--   Variance
--   Covariance
--   Contravariance
--   Invariance
-
-### Algebraic Data Types
-
-دو الگوی مهم:
-
-**Product Type**
-
-چند مقدار با هم:
-
-``` text
-Person = Name × Age × Email
-```
-
-**Sum Type**
-
-یکی از چند حالت:
-
-``` text
-Result = Success | Error
-```
-
-این مفاهیم پایه طراحی Type-safe هستند.
-
-## Complexity و انتخاب Collection
-
-انتخاب Data Structure باید با Complexity هماهنگ باشد.
-
-  عملیات           Array      Dynamic Array/List       Hash Map   Balanced Tree
-  -------------- ------- ----------------------- -------------- ---------------
-  Index Access      O(1)                    O(1)             \-              \-
-  Search            O(n)                    O(n)   O(1) average        O(log n)
-  Insert            O(n)   O(1) amortized at end   O(1) average        O(log n)
-  Delete            O(n)                    O(n)   O(1) average        O(log n)
-
-مقادیر دقیق به پیاده‌سازی و شرایط بستگی دارند.
-
-### Big-Oهای کلیدی
-
-``` text
-O(1)       Constant
-O(log n)   Logarithmic
-O(n)       Linear
-O(n log n) Linearithmic
-O(n²)      Quadratic
-O(2^n)     Exponential
-```
-
-## Serialization و Data Interchange
-
-Serialization برای ذخیره یا انتقال داده استفاده می‌شود.
-
-### JSON
-
-مناسب API و Web.
-
-### XML
-
-مناسب سیستم‌های legacy و ساختارهای سندمحور.
-
-### YAML
-
-خوانا و مناسب Configuration، با این ملاحظه که parsing آن باید امن و
-کنترل‌شده باشد.
-
-### CSV
-
-مناسب داده‌های جدولی ساده.
-
-### Protocol Buffers
-
-Binary، سریع و schema-based.
-
-### Avro
-
-مناسب داده‌های schema-based و اکوسیستم‌های Data Engineering.
-
-### Schema Evolution
-
-در سیستم‌های Enterprise باید تغییر نسخه Schema مدیریت شود:
-
-``` text
-Schema V1
-   ↓
-Schema V2
-   ↓
-Compatibility
-```
-
-## Database Data Types
-
-انواع مهم در پایگاه داده:
-
--   Integer
--   BigInt
--   Decimal/Numeric
--   Float
--   Boolean
--   Char/Varchar/Text
--   Date/Time
--   Timestamp
--   UUID
--   Binary/BLOB
--   JSON/JSONB
--   Array
--   Enum
--   Vector
-
-### Domain Data Types
-
-در طراحی حرفه‌ای فقط نوع خام کافی نیست. گاهی Value Object مناسب‌تر است:
-
-``` text
-EmailAddress
-Money
-UserId
-ProductCode
-PhoneNumber
-```
-
-این کار Validation و Domain Rules را بهتر می‌کند.
-
-## Concurrency و Data Safety
-
-موضوعات مهم:
-
--   Thread Safety
--   Race Condition
--   Deadlock
--   Lock
--   Mutex
--   Semaphore
--   Atomic Operation
--   Concurrent Collection
--   Immutable Data
--   Actor Model
-
-### Race Condition
-
-وقتی نتیجه برنامه به ترتیب اجرای هم‌زمان عملیات وابسته شود.
-
-### Immutable Data
-
-یکی از راه‌های کاهش پیچیدگی Shared State است.
-
-## Distributed Systems Data
-
-در سیستم‌های توزیع‌شده با این مفاهیم روبه‌رو می‌شویم:
-
--   Message
--   Event
--   Event Stream
--   Queue
--   Topic
--   Cache
--   Session
--   Distributed State
--   Serialization
--   Schema
--   Event Sourcing
--   CQRS
--   Idempotency
--   Consistency
-
-### Event
-
-رویدادی که رخ داده است:
-
-``` text
-OrderCreated
-PaymentCompleted
-DocumentIndexed
-```
-
-### Idempotency
-
-یک عملیات idempotent در اجرای تکراری، نتیجه منطقی ناخواسته ایجاد نمی‌کند.
-این موضوع برای API و سیستم‌های Agent بسیار مهم است.
-
-## AI/LLM Data Models
-
-مدل‌های داده مهم AI:
-
-  نوع              کاربرد
-  ---------------- --------------------
-  Token            واحد متن برای مدل
-  Token ID         شناسه عددی Token
-  Tensor           نمایش چندبعدی داده
-  Vector           بردار عددی
-  Embedding        نمایش معنایی
-  Logits           امتیاز خام خروجی
-  Probability      احتمال خروجی
-  Attention Mask   کنترل توجه
-  Message          پیام مکالمه
-  Tool Call        درخواست ابزار
-  Tool Result      نتیجه ابزار
-  Agent State      وضعیت Agent
-  Memory Item      واحد حافظه
-  Document         سند
-  Chunk            قطعه سند
-  Metadata         اطلاعات توصیفی
-
-## RAG Data Models
-
-یک RAG Enterprise معمولاً این زنجیره را دارد:
-
-``` text
-Source
-  ↓
-Document
-  ↓
-Parsed Content
-  ↓
-Chunk
-  ↓
-Embedding
-  ↓
-Vector Record
-  ↓
-Similarity Search
-  ↓
-Retrieval Result
-  ↓
-Reranking
-  ↓
-Context
-  ↓
-LLM
-  ↓
-Answer
-```
-
-### Metadata
-
-نمونه:
-
-``` text
-{
-  document_id,
-  source,
-  department,
-  document_type,
-  title,
-  date,
-  version,
-  language,
-  access_level,
-  tags
+```swift
+// Swift
+struct Point {
+    var x: Int
+    var y: Int
 }
 ```
 
-### Similarity Score
-
-برای رتبه‌بندی نتایج بازیابی استفاده می‌شود؛ معیارهای متداول:
-
--   Cosine Similarity
--   Dot Product
--   Euclidean Distance
-
-### Reranking Result
-
-بعد از Retrieval اولیه، مدل Reranker می‌تواند نتایج را دوباره مرتب کند.
-
-## زنجیره کامل دانش
-
-برای یک مهندس نرم‌افزار و AI Engineer، تصویر کامل را می‌توان این‌گونه خلاصه
-کرد:
-
-``` text
-Data
- ↓
-Data Type
- ↓
-Type System
- ↓
-Memory Model
- ↓
-Collection
- ↓
-Data Structure
- ↓
-Algorithm
- ↓
-Complexity
- ↓
-Generic / Advanced Type
- ↓
-Equality / Identity / Hashing
- ↓
-Mutability / Immutability
- ↓
-Copy / Reference / Ownership
- ↓
-Type Conversion
- ↓
-Serialization
- ↓
-Schema / Validation
- ↓
-Database Data Type
- ↓
-Concurrency
- ↓
-Distributed Data
- ↓
-Event / Message
- ↓
-AI Data Type
- ↓
-Tensor / Vector / Embedding
- ↓
-Document / Chunk / Metadata
- ↓
-RAG Data Model
- ↓
-Agent State
- ↓
-Memory
- ↓
-Enterprise AI System
+```kotlin
+// Kotlin
+data class Point(val x: Int, val y: Int)
 ```
 
-## جمع‌بندی نهایی
-
-اگر هدف فقط برنامه‌نویسی مقدماتی باشد، دانستن Primitive Types، String،
-Array/List، Set، Map، Tuple، Object و چند Data Structure اصلی کافی است.
-
-اگر هدف **Software Engineering حرفه‌ای** باشد، باید Type System، Memory
-Model، Complexity، Generics، Equality، Mutability، Serialization،
-Database Types، Concurrency و Distributed Data را نیز یاد گرفت.
-
-اگر هدف **AI/LLM/Agentic AI Engineering** باشد، این مباحث باید تا این
-سطح ادامه پیدا کنند:
-
-``` text
-Tensor
-Embedding
-Vector
-Token
-Message
-Tool Call
-Tool Result
-Document
-Chunk
-Metadata
-Vector Record
-Retrieval Result
-Knowledge Graph
-Agent State
-Memory
+```java
+// Java (JDK 14+)
+record Point(int x, int y) {}
 ```
 
-بنابراین یک مهندس حرفه‌ای فقط «نوع داده» را نمی‌شناسد؛ بلکه می‌داند **داده
-چگونه نمایش داده، ذخیره، کپی، مقایسه، منتقل، ایمن، ایندکس، بازیابی و در
-نهایت در یک سیستم AI استفاده می‌شود.**
+```csharp
+// C#
+record Point(int X, int Y);
+// یا struct
+struct PointS { public int X, Y; }
+```
+
+```scala
+// Scala
+case class Point(x: Int, y: Int)
+```
+
+```dart
+// Dart
+class Point {
+  final int x, y;
+  Point(this.x, this.y);
+}
+// یا record (Dart 3)
+```
+
+```haskell
+-- Haskell
+data Point = Point { x :: Int, y :: Int }
+```
+
+### 3.3 Union / Variant / Sum Type
+
+```rust
+// Rust
+enum Shape {
+    Circle(f64),
+    Rectangle(f64, f64),
+}
+```
+
+```swift
+// Swift
+enum Shape {
+    case circle(Double)
+    case rectangle(Double, Double)
+}
+```
+
+```typescript
+// TypeScript
+type Shape = 
+  | { kind: "circle"; radius: number }
+  | { kind: "rectangle"; width: number; height: number };
+```
+
+```scala
+// Scala
+sealed trait Shape
+case class Circle(radius: Double) extends Shape
+case class Rectangle(w: Double, h: Double) extends Shape
+```
+
+```kotlin
+// Kotlin
+sealed class Shape {
+    data class Circle(val radius: Double) : Shape()
+    data class Rectangle(val w: Double, val h: Double) : Shape()
+}
+```
+
+```haskell
+-- Haskell
+data Shape = Circle Double | Rectangle Double Double
+```
+
+```ocaml-like
+// Gleam
+pub type Shape {
+  Circle(Float)
+  Rectangle(Float, Float)
+}
+```
+
+```csharp
+// C# - Discriminated Union (پیشنهادی/کتابخانه‌ای)
+// در C# 12+ با الگوها
+```
+
+### 3.4 Nullable / Optional
+
+| زبان | نحو | توضیح |
+|------|------|--------|
+| **Kotlin** | `String?` | نوع nullable |
+| **Swift** | `String?` / `Optional<String>` | enum با `some`/`none` |
+| **Rust** | `Option<T>` | enum با `Some(T)` / `None` |
+| **Scala** | `Option[T]` | `Some(T)` / `None` |
+| **Haskell** | `Maybe a` | `Just a` / `Nothing` |
+| **Go** | pointer / zero value | `*T` یا `interface{}` |
+| **Java** | `Optional<T>` | کلاس wrapper |
+| **C#** | `T?` (برای value types) | `Nullable<T>` |
+| **TypeScript** | `T \| null \| undefined` | union type |
+| **Dart** | `String?` | null safety (Dart 2.12+) |
+| **Elixir** | `nil` | مقدار خاص |
+| **Erlang** | `undefined` | - |
+| **Ruby** | `nil` | شیء از کلاس `NilClass` |
+| **Python** | `None` / `Optional[T]` | - |
+| **Gleam** | `Option(a)` | `Some(a)` / `None` |
+| **Zig** | `?T` | optional type |
+| **Carbon** | `Optional(T)` | - |
+
+### 3.5 Enum
+
+```rust
+// Rust
+enum Color { Red, Green, Blue }
+enum Message { Quit, Move { x: i32, y: i32 }, Write(String) }
+```
+
+```swift
+// Swift
+enum Color { case red, green, blue }
+enum Compass { case north, south, east, west }
+```
+
+```kotlin
+// Kotlin
+enum class Color { RED, GREEN, BLUE }
+```
+
+```java
+// Java
+enum Color { RED, GREEN, BLUE }
+```
+
+```csharp
+// C#
+enum Color { Red, Green, Blue }
+```
+
+```go
+// Go - enum صریح ندارد، از iota استفاده می‌شود
+const (
+    Red = iota
+    Green
+    Blue
+)
+```
+
+```scala
+// Scala
+object Color extends Enumeration {
+  val Red, Green, Blue = Value
+}
+```
+
+```dart
+// Dart
+enum Color { red, green, blue }
+```
+
+```typescript
+// TypeScript
+enum Color { Red, Green, Blue }
+// یا string enum
+enum Direction { Up = "UP", Down = "DOWN" }
+```
+
+```haskell
+-- Haskell
+data Color = Red | Green | Blue deriving (Eq, Show)
+```
+
+```elixir
+# Elixir - اتم‌ها
+:red, :green, :blue
+```
+
+```erlang
+% Erlang
+red, green, blue % اتم‌ها
+```
+
+---
+
+## 4. مجموعه‌ها (Collections)
+
+### 4.1 آرایه / لیست (Array / List)
+
+#### آرایه ثابت (Fixed-size Array)
+
+| زبان | نحو | ویژگی |
+|------|------|--------|
+| **C** | `int arr[10];` | اندازه ثابت، بدون bounds check |
+| **C++** | `std::array<int, 10>` | اندازه ثابت در کامپایل |
+| **Rust** | `[i32; 10]` | ایمن، bounds-checked |
+| **Go** | `[10]int` | value type |
+| **Swift** | - | آرایه پویا دارد |
+| **Zig** | `[10]i32` | ثابت |
+| **Carbon** | `[i32; 10]` | - |
+
+#### لیست پویا (Dynamic Array / List)
+
+| زبان | نوع | رشد خودکار |
+|------|------|-------------|
+| **Python** | `list` | ✅ (over-allocation) |
+| **JavaScript** | `Array` | ✅ |
+| **Java** | `ArrayList<T>` | ✅ |
+| **C#** | `List<T>` | ✅ |
+| **C++** | `std::vector<T>` | ✅ |
+| **Go** | `[]T` (slice) | ✅ (با append) |
+| **Rust** | `Vec<T>` | ✅ |
+| **Kotlin** | `MutableList<T>` / `ArrayList<T>` | ✅ |
+| **Swift** | `Array<T>` | ✅ |
+| **Dart** | `List<T>` | ✅ |
+| **Ruby** | `Array` | ✅ |
+| **PHP** | `array` (indexed) | ✅ |
+| **Scala** | `ArrayBuffer[T]`, `List[T]` | ✅ / immutable |
+| **Haskell** | `[a]` | immutable linked list |
+| **Elixir** | `List` | immutable linked list |
+| **Erlang** | List | immutable linked list |
+| **Zig** | `std.ArrayList(T)` | ✅ |
+| **Gleam** | `List(a)` | immutable |
+
+**مثال‌ها:**
+
+```python
+# Python
+nums = [1, 2, 3]
+nums.append(4)
+```
+
+```javascript
+// JavaScript
+const nums = [1, 2, 3];
+nums.push(4);
+```
+
+```java
+// Java
+List<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3));
+nums.add(4);
+```
+
+```rust
+// Rust
+let mut nums = vec![1, 2, 3];
+nums.push(4);
+```
+
+```go
+// Go
+nums := []int{1, 2, 3}
+nums = append(nums, 4)
+```
+
+```haskell
+-- Haskell
+nums = [1, 2, 3] ++ [4]
+```
+
+```elixir
+# Elixir
+nums = [1, 2, 3] ++ [4]
+```
+
+### 4.2 نگاشت / دیکشنری (Map / Dictionary)
+
+| زبان | نوع | مرتب؟ | Thread-safe؟ |
+|------|------|--------|--------------|
+| **Python** | `dict` | ✅ (از 3.7) | ❌ |
+| **JavaScript** | `Map`, `Object` | ✅ (Map) | ❌ |
+| **Java** | `HashMap`, `TreeMap`, `LinkedHashMap`, `ConcurrentHashMap` | بسته به نوع | ✅ (CHM) |
+| **C#** | `Dictionary<K,V>`, `SortedDictionary`, `ConcurrentDictionary` | - | ✅ |
+| **C++** | `std::map` (RB-tree), `std::unordered_map` (hash) | map: ✅ | ❌ |
+| **Go** | `map[K]V` | ❌ | ❌ |
+| **Rust** | `HashMap<K,V>`, `BTreeMap<K,V>` | BTreeMap: ✅ | ❌ |
+| **Swift** | `Dictionary<K,V>` | ❌ | ❌ |
+| **Kotlin** | `Map<K,V>`, `MutableMap`, `LinkedHashMap`, `TreeMap` | LinkedHashMap: ✅ | ❌ |
+| **Dart** | `Map<K,V>`, `LinkedHashMap`, `SplayTreeMap` | LinkedHashMap: ✅ | ❌ |
+| **Ruby** | `Hash` | ✅ (از 1.9) | ❌ |
+| **PHP** | `array` (associative) | ✅ | ❌ |
+| **Scala** | `Map[K,V]`, `HashMap`, `TreeMap`, `LinkedHashMap` | - | ✅ (immutable) |
+| **Haskell** | `Map k v` (Data.Map), `HashMap` (unordered) | Map: ✅ | - |
+| **Elixir** | `Map` | ❌ (order not guaranteed) | ✅ (immutable) |
+| **Erlang** | `maps`, `dict`, `gb_trees` | - | ✅ |
+| **Zig** | `std.HashMap(K,V, ...)` | ❌ | ❌ |
+| **Gleam** | `Dict(k, v)` | ❌ | ✅ (immutable) |
+| **Carbon** | - | - | - |
+
+**مثال‌ها:**
+
+```python
+# Python
+user = {"name": "Ali", "age": 30}
+user["city"] = "Tehran"
+```
+
+```javascript
+// JavaScript
+const user = new Map();
+user.set("name", "Ali");
+// یا
+const user2 = { name: "Ali", age: 30 };
+```
+
+```java
+// Java
+Map<String, Object> user = new HashMap<>();
+user.put("name", "Ali");
+```
+
+```rust
+// Rust
+use std::collections::HashMap;
+let mut user = HashMap::new();
+user.insert("name", "Ali");
+```
+
+```go
+// Go
+user := map[string]any{
+    "name": "Ali",
+    "age":  30,
+}
+```
+
+```elixir
+# Elixir
+user = %{name: "Ali", age: 30}
+user = Map.put(user, :city, "Tehran")
+```
+
+```haskell
+-- Haskell
+import qualified Data.Map as M
+user = M.fromList [("name", "Ali"), ("age", 30)]
+```
+
+### 4.3 مجموعه (Set)
+
+| زبان | نوع | مرتب؟ |
+|------|------|--------|
+| **Python** | `set`, `frozenset` | ❌ |
+| **JavaScript** | `Set`, `WeakSet` | ❌ (insertion order) |
+| **Java** | `HashSet`, `TreeSet`, `LinkedHashSet` | بسته به نوع |
+| **C#** | `HashSet<T>`, `SortedSet<T>` | - |
+| **C++** | `std::set` (ordered), `std::unordered_set` | - |
+| **Go** | - (با `map[K]struct{}` شبیه‌سازی) | - |
+| **Rust** | `HashSet<T>`, `BTreeSet<T>` | - |
+| **Swift** | `Set<T>` | ❌ |
+| **Kotlin** | `Set<T>`, `MutableSet`, `TreeSet`, `LinkedHashSet` | - |
+| **Dart** | `Set<T>`, `LinkedHashSet`, `SplayTreeSet` | - |
+| **Ruby** | `Set` (کلاس استاندارد) | ❌ |
+| **PHP** | `array_unique` / `SplObjectStorage` | - |
+| **Scala** | `Set[T]`, `TreeSet`, `HashSet` | - |
+| **Haskell** | `Set a` (Data.Set), `HashSet` | Set: ✅ |
+| **Elixir** | `MapSet` | ❌ |
+| **Erlang** | `sets`, `gb_sets` | - |
+| **Zig** | `std.AutoHashMap(T, void)` | ❌ |
+| **Gleam** | `Set(a)` | ❌ |
+
+**مثال‌ها:**
+
+```python
+# Python
+s = {1, 2, 3}
+s.add(4)
+```
+
+```rust
+// Rust
+use std::collections::HashSet;
+let mut s = HashSet::from([1, 2, 3]);
+s.insert(4);
+```
+
+```elixir
+# Elixir
+s = MapSet.new([1, 2, 3])
+s = MapSet.put(s, 4)
+```
+
+### 4.4 سایر مجموعه‌ها
+
+#### صف (Queue) و پشته (Stack)
+
+| زبان | Queue | Stack |
+|------|-------|-------|
+| **Python** | `collections.deque` | `list` (با `append`/`pop`) |
+| **Java** | `Queue`, `LinkedList`, `ArrayDeque` | `Stack` (منسوخ) / `Deque` |
+| **C++** | `std::queue`, `std::priority_queue` | `std::stack` |
+| **C#** | `Queue<T>`, `PriorityQueue<T>` | `Stack<T>` |
+| **Go** | با channel یا slice | با slice |
+| **Rust** | `VecDeque<T>` | `Vec<T>` |
+| **Elixir** | - | `[head \| tail]` (لیست) |
+| **Erlang** | `queue` module | List |
+
+#### Tuple / Record خاص
+
+| زبان | نوع | توضیح |
+|------|------|--------|
+| **Elixir** | `Keyword List` | لیستی از تاپل‌های `{atom, value}` |
+| **Erlang** | `proplists` | لیست property |
+| **PHP** | `array` | هم آرایه هم دیکشنری |
+| **JavaScript** | `WeakMap`, `WeakSet` | حافظه ضعیف |
+
+---
+
+## 5. بررسی زبان‌به‌زبان
+
+### 5.1 Python
+
+```python
+# Primitive
+x: int = 10
+y: float = 3.14
+b: bool = True
+s: str = "hello"
+
+# Composite
+t: tuple[int, str] = (1, "a")
+# Named tuple
+from typing import NamedTuple
+class Point(NamedTuple):
+    x: int
+    y: int
+
+# Collections
+lst: list[int] = [1, 2, 3]
+d: dict[str, int] = {"a": 1}
+st: set[int] = {1, 2, 3}
+fs: frozenset[int] = frozenset([1, 2])
+
+# Special
+opt: int | None = None  # Python 3.10+
+```
+
+**ویژگی‌ها:**
+- نوع‌دهی پویا (dynamic typing)
+- type hints اختیاری
+- همه چیز شیء است
+- اعداد صحیح با دقت دلخواه
+
+### 5.2 JavaScript / TypeScript
+
+```javascript
+// JavaScript
+let n = 10;           // number
+let s = "hello";      // string
+let b = true;         // boolean
+let arr = [1, 2, 3];  // array
+let obj = { a: 1 };   // object
+let m = new Map();
+let st = new Set();
+let sym = Symbol("id");
+let big = 10n;        // BigInt
+```
+
+```typescript
+// TypeScript
+let n: number = 10;
+let s: string = "hello";
+let b: boolean = true;
+let arr: number[] = [1, 2, 3];
+let tuple: [string, number] = ["a", 1];
+let obj: { name: string; age: number } = { name: "Ali", age: 30 };
+let u: string | number = "hello";
+type Result = { ok: true; data: string } | { ok: false; error: string };
+```
+
+**ویژگی‌ها:**
+- همه چیز شیء است (حتی اعداد)
+- `typeof null === "object"` (باگ تاریخی)
+- TypeScript type system بسیار قدرتمند
+- `Map` و `Set` از ES6
+
+### 5.3 Java
+
+```java
+// Primitive
+int n = 10;
+double d = 3.14;
+boolean b = true;
+char c = 'A';
+
+// Object
+Integer nObj = 10;       // autoboxing
+String s = "hello";
+
+// Collections
+List<Integer> list = new ArrayList<>();
+Map<String, Integer> map = new HashMap<>();
+Set<Integer> set = new HashSet<>();
+
+// Record (JDK 14+)
+record Point(int x, int y) {}
+
+// Optional
+Optional<String> opt = Optional.of("hello");
+
+// Enum
+enum Color { RED, GREEN, BLUE }
+```
+
+**ویژگی‌ها:**
+- تمایز primitive/reference
+- Generics (type erasure)
+- Records برای داده‌های immutable
+- Stream API
+
+### 5.4 C#
+
+```csharp
+// Primitive
+int n = 10;
+double d = 3.14;
+bool b = true;
+char c = 'A';
+decimal money = 99.99m;
+
+// Nullable
+int? nullableInt = null;
+string? nullableString = null;
+
+// Collections
+List<int> list = new() { 1, 2, 3 };
+Dictionary<string, int> dict = new() { ["a"] = 1 };
+HashSet<int> set = new() { 1, 2, 3 };
+
+// Tuple
+var t = (1, "hello");
+var named = (Name: "Ali", Age: 30);
+
+// Record
+record Point(int X, int Y);
+
+// Pattern matching
+object obj = 5;
+if (obj is int i) Console.WriteLine(i);
+```
+
+**ویژگی‌ها:**
+- value type (`struct`) vs reference type (`class`)
+- `Nullable<T>` برای value types
+- Records (C# 9+)
+- Pattern matching پیشرفته
+
+### 5.5 C++
+
+```cpp
+// Primitive
+int n = 10;
+double d = 3.14;
+bool b = true;
+
+// Containers
+#include <vector>
+#include <map>
+#include <set>
+#include <tuple>
+#include <array>
+#include <unordered_map>
+
+std::vector<int> vec = {1, 2, 3};
+std::array<int, 3> arr = {1, 2, 3};
+std::map<std::string, int> m;
+std::unordered_map<std::string, int> um;
+std::set<int> s;
+std::tuple<int, double, std::string> t{1, 2.0, "hi"};
+
+// Optional, Variant, Any (C++17)
+#include <optional>
+#include <variant>
+#include <any>
+
+std::optional<int> opt = 5;
+std::variant<int, std::string> v = "hello";
+std::any a = 42;
+
+// Smart pointers
+std::unique_ptr<int> up = std::make_unique<int>(10);
+std::shared_ptr<int> sp = std::make_shared<int>(10);
+```
+
+**ویژگی‌ها:**
+- کنترل دقیق حافظه
+- Templates برای generic programming
+- RAII
+- move semantics
+
+### 5.6 C
+
+```c
+// Primitive
+int n = 10;
+double d = 3.14;
+char c = 'A';
+_Bool b = 1; // یا bool با <stdbool.h>
+
+// Composite
+struct Point { int x, y; };
+union Value { int i; float f; char c; };
+enum Color { RED, GREEN, BLUE };
+
+// Array
+int arr[10];
+int matrix[3][4];
+
+// Pointer
+int *p = &n;
+
+// String
+char str[] = "hello";
+```
+
+**ویژگی‌ها:**
+- پایین‌ترین سطح
+- pointer-based
+- بدون collections سطح بالا
+- مدیریت دستی حافظه
+
+### 5.7 Go
+
+```go
+// Primitive
+var n int = 10
+var f float64 = 3.14
+var b bool = true
+var s string = "hello"
+
+// Composite
+type Point struct {
+    X, Y int
+}
+
+// Collections
+arr := [3]int{1, 2, 3}         // array
+slice := []int{1, 2, 3}        // slice
+m := map[string]int{"a": 1}    // map
+
+// Interface
+var i interface{} = 42
+var anyVal any = "hello" // Go 1.18+
+
+// Channel
+ch := make(chan int)
+
+// Pointer
+p := &n
+```
+
+**ویژگی‌ها:**
+- slice به جای array پویا
+- map داخلی
+- interface ضمنی
+- channel برای همزمانی
+- بدون class، بدون inheritance
+
+### 5.8 Rust
+
+```rust
+// Primitive
+let n: i32 = 10;
+let f: f64 = 3.14;
+let b: bool = true;
+let c: char = 'A';
+
+// Composite
+struct Point { x: i32, y: i32 }
+enum Shape {
+    Circle(f64),
+    Rectangle(f64, f64),
+}
+
+// Collections
+use std::collections::{HashMap, HashSet, BTreeMap, VecDeque};
+let mut v: Vec<i32> = vec![1, 2, 3];
+let mut m: HashMap<String, i32> = HashMap::new();
+let mut s: HashSet<i32> = HashSet::new();
+
+// Tuple
+let t: (i32, f64, &str) = (1, 2.0, "hi");
+
+// Option & Result
+let opt: Option<i32> = Some(5);
+let res: Result<i32, String> = Ok(10);
+
+// Smart pointers
+use std::rc::Rc;
+use std::sync::Arc;
+use std::boxed::Box;
+let b = Box::new(5);
+let rc = Rc::new(5);
+```
+
+**ویژگی‌ها:**
+- مالکیت (ownership)
+- borrow checker
+- zero-cost abstractions
+- `Option` و `Result` به جای null/exception
+- lifetime
+
+### 5.9 Kotlin
+
+```kotlin
+// Primitive (در JVM به صورت boxed/unboxed)
+val n: Int = 10
+val f: Double = 3.14
+val b: Boolean = true
+val c: Char = 'A'
+
+// Nullable
+val s: String? = null
+
+// Collections
+val list: List<Int> = listOf(1, 2, 3)
+val mutableList: MutableList<Int> = mutableListOf(1, 2, 3)
+val map: Map<String, Int> = mapOf("a" to 1)
+val set: Set<Int> = setOf(1, 2, 3)
+
+// Data class
+data class Point(val x: Int, val y: Int)
+
+// Sealed class
+sealed class Result {
+    data class Success(val data: String) : Result()
+    data class Error(val msg: String) : Result()
+}
+
+// Pair & Triple
+val p = Pair(1, "one")
+val t = Triple(1, "one", true)
+```
+
+**ویژگی‌ها:**
+- null safety در سطح زبان
+- data class
+- sealed class
+- extension functions
+- coroutine
+
+### 5.10 Swift
+
+```swift
+// Primitive
+let n: Int = 10
+let f: Double = 3.14
+let b: Bool = true
+let c: Character = "A"
+let s: String = "hello"
+
+// Optional
+var opt: String? = nil
+if let value = opt { print(value) }
+
+// Collections
+let arr: [Int] = [1, 2, 3]
+var dict: [String: Int] = ["a": 1]
+let set: Set<Int> = [1, 2, 3]
+
+// Tuple
+let point: (Int, Int) = (3, 4)
+let labeled: (x: Int, y: Int) = (3, 4)
+
+// Struct
+struct Point {
+    var x: Int
+    var y: Int
+}
+
+// Enum
+enum Direction {
+    case north, south, east, west
+}
+
+// Protocol
+protocol Drawable {
+    func draw()
+}
+```
+
+**ویژگی‌ها:**
+- value type پیش‌فرض برای struct
+- optional chaining
+- pattern matching
+- protocol-oriented programming
+- ARC
+
+### 5.11 Dart
+
+```dart
+// Primitive
+int n = 10;
+double f = 3.14;
+bool b = true;
+String s = "hello";
+
+// Nullable (null safety)
+String? nullable = null;
+
+// Collections
+List<int> list = [1, 2, 3];
+Map<String, int> map = {'a': 1};
+Set<int> set = {1, 2, 3};
+
+// Record (Dart 3+)
+var point = (3, 4);
+var person = (name: 'Ali', age: 30);
+
+// Class
+class Point {
+  final int x, y;
+  Point(this.x, this.y);
+}
+
+// Enum
+enum Color { red, green, blue }
+
+// Sealed class (Dart 3)
+sealed class Result {}
+class Success extends Result {}
+class Error extends Result {}
+```
+
+**ویژگی‌ها:**
+- sound null safety
+- Records و Patterns (Dart 3)
+- Dart 3 با sealed classes
+- AOT و JIT compilation
+
+### 5.12 Ruby
+
+```ruby
+# Primitive
+n = 10            # Integer
+f = 3.14          # Float
+b = true          # TrueClass
+s = "hello"       # String
+sym = :symbol     # Symbol
+
+# Collections
+arr = [1, 2, 3]           # Array
+hash = { "a" => 1 }       # Hash
+set = Set.new([1, 2, 3])  # Set
+
+# Range
+r = 1..10
+
+# Nil
+x = nil  # NilClass
+
+# Everything is an object
+5.times { |i| puts i }
+```
+
+**ویژگی‌ها:**
+- همه چیز شیء
+- duck typing
+- Hash به جای Map
+- Symbol نوع خاصی است
+- block و Proc
+
+### 5.13 PHP
+
+```php
+// Scalar
+$n = 10;             // int
+$f = 3.14;           // float
+$b = true;           // bool
+$s = "hello";        // string
+
+// Compound
+$arr = [1, 2, 3];              // array (indexed)
+$map = ["a" => 1, "b" => 2];   // array (associative)
+$obj = new stdClass();
+
+// PHP 7.4+ typed properties
+class User {
+    public int $id;
+    public string $name;
+}
+
+// PHP 8+
+enum Color { case Red; case Green; case Blue; }
+readonly class Point { public function __construct(public int $x, public int $y) {} }
+
+// Union types
+function foo(int|string $x): int|false { ... }
+
+// Null
+$x = null;
+```
+
+**ویژگی‌ها:**
+- array همه‌کاره (indexed + associative)
+- type hints تدریجی
+- attributes (PHP 8)
+- enums (PHP 8.1)
+- readonly classes (PHP 8.2)
+
+### 5.14 Scala
+
+```scala
+// Primitive (همه چیز شیء)
+val n: Int = 10
+val f: Double = 3.14
+val b: Boolean = true
+val c: Char = 'A'
+
+// Collections
+val list: List[Int] = List(1, 2, 3)
+val vector: Vector[Int] = Vector(1, 2, 3)
+val map: Map[String, Int] = Map("a" -> 1)
+val set: Set[Int] = Set(1, 2, 3)
+
+// Tuple
+val t = (1, "hello", true)
+val first = t._1
+
+// Case class
+case class Point(x: Int, y: Int)
+
+// Sealed trait
+sealed trait Shape
+case class Circle(r: Double) extends Shape
+case class Rectangle(w: Double, h: Double) extends Shape
+
+// Option
+val opt: Option[Int] = Some(5)
+
+// Either
+val either: Either[String, Int] = Right(10)
+```
+
+**ویژگی‌ها:**
+- ترکیب FP و OOP
+- immutable collections پیش‌فرض
+- case class
+- pattern matching
+- type classes (implicits/givens)
+
+### 5.15 Erlang
+
+```erlang
+% Primitive
+N = 10,              % integer (arbitrary precision)
+F = 3.14,            % float
+B = true,            % boolean (atom)
+A = hello,           % atom
+S = "hello",         % string (list of integers)
+
+% Composite
+Point = {3, 4},      % tuple
+Person = {person, "Ali", 30},
+
+% List
+L = [1, 2, 3],
+L2 = [H|T] = L,      % head/tail
+
+% Map (ERLANG 17+)
+M = #{name => "Ali", age => 30},
+
+% Binary
+Bin = <<"hello">>,
+
+% Record
+-record(person, {name, age}).
+P = #person{name = "Ali", age = 30}.
+```
+
+**ویژگی‌ها:**
+- immutable variables
+- actor model
+- pattern matching عمیق
+- let-it-crash philosophy
+- hot code swapping
+
+### 5.16 Elixir
+
+```elixir
+# Primitive
+n = 10            # Integer
+f = 3.14          # Float
+b = true          # Boolean
+a = :atom         # Atom
+s = "hello"       # String (UTF-8 binary)
+
+# Composite
+tuple = {1, 2, 3}
+keyword = [name: "Ali", age: 30]  # [{:name, "Ali"}, {:age, 30}]
+
+# Collections
+list = [1, 2, 3]
+map = %{name: "Ali", age: 30}
+mapset = MapSet.new([1, 2, 3])
+
+# Struct
+defmodule User do
+  defstruct [:name, :age]
+end
+u = %User{name: "Ali", age: 30}
+
+# Pattern matching
+%{name: name} = map
+
+# Nil
+x = nil
+```
+
+**ویژگی‌ها:**
+- بر پایه BEAM VM
+- immutable
+- pattern matching
+- pipe operator `|>`
+- actor model (Erlang)
+- metaprogramming با macros
+
+### 5.17 Zig
+
+```zig
+// Primitive
+const n: i32 = 10;
+const f: f64 = 3.14;
+const b: bool = true;
+const c: u8 = 'A';
+
+// Optional
+var opt: ?i32 = null;
+
+// Error Union
+const FileError = error { NotFound, PermissionDenied };
+fn read() FileError![]const u8 { ... }
+
+// Composite
+const Point = struct { x: i32, y: i32 };
+const Shape = union(enum) {
+    circle: f64,
+    rectangle: struct { w: f64, h: f64 },
+};
+
+// Array & Slice
+var arr: [3]i32 = .{ 1, 2, 3 };
+const slice: []const i32 = arr[0..];
+
+// Collections
+const ArrayList = std.ArrayList;
+const HashMap = std.HashMap;
+var list = ArrayList(i32).init(allocator);
+var map = HashMap([]const u8, i32, ...).init(allocator);
+
+// Enum
+const Color = enum { red, green, blue };
+```
+
+**ویژگی‌ها:**
+- بدون hidden allocation
+- comptime execution
+- error union
+- manual memory management با allocator
+- no hidden control flow
+
+### 5.18 Carbon
+
+```carbon
+// Primitive (طراحی در حال تکامل - تا 2026)
+var n: i32 = 10;
+var f: f64 = 3.14;
+var b: bool = true;
+
+// Optional
+var opt: Optional(i32) = None;
+
+// Class
+class Point {
+  var x: i32;
+  var y: i32;
+}
+
+// Tuple
+var t: (i32, f64) = (1, 2.0);
+
+// Choice type (union)
+choice Shape {
+  circle(f64),
+  rectangle(f64, f64),
+}
+```
+
+**ویژگی‌ها:**
+- جانشین مدرن برای C++
+- interoperability با C++
+- generics با interface
+- طراحی در حال تکامل (experimental)
+
+### 5.19 Gleam
+
+```gleam
+// Primitive
+let n: Int = 10
+let f: Float = 3.14
+let b: Bool = True
+let s: String = "hello"
+let a: Atom = :hello
+
+// Collections
+let list: List(Int) = [1, 2, 3]
+let tuple: #(Int, String) = #(1, "hello")
+let dict: Dict(String, Int) = dict.new()
+let set: Set(Int) = set.new()
+
+// Custom type
+pub type Shape {
+  Circle(Float)
+  Rectangle(Float, Float)
+}
+
+// Option
+let opt: Option(Int) = Some(5)
+
+// Result
+let res: Result(Int, String) = Ok(10)
+
+// Record
+pub type User {
+  User(name: String, age: Int)
+}
+```
+
+**ویژگی‌ها:**
+- روی BEAM VM اجرا می‌شود
+- type inference قوی
+- immutable
+- pattern matching
+- pipe operator `|>`
+- syntax مدرن و تمیز
+
+### 5.20 Haskell
+
+```haskell
+-- Primitive
+n = 10 :: Int
+f = 3.14 :: Double
+b = True :: Bool
+c = 'A' :: Char
+s = "hello" :: String  -- [Char]
+
+-- Tuple
+t = (1, "hello", True) :: (Int, String, Bool)
+
+-- List
+lst = [1, 2, 3] :: [Int]
+
+-- Map
+import qualified Data.Map as M
+m = M.fromList [("a", 1), ("b", 2)] :: M.Map String Int
+
+-- Set
+import qualified Data.Set as S
+st = S.fromList [1, 2, 3] :: S.Set Int
+
+-- Algebraic Data Type
+data Shape = Circle Double | Rectangle Double Double
+
+-- Maybe
+mb = Just 5 :: Maybe Int
+
+-- Either
+e = Right 10 :: Either String Int
+
+-- Type class
+class Eq a where
+  (==) :: a -> a -> Bool
+```
+
+**ویژگی‌ها:**
+- pure functional
+- lazy evaluation
+- type classes
+- monads
+- strong static typing
+- Hindley-Milner type inference
+
+---
+
+## 6. جدول مقایسه‌ای جامع
+
+### 6.1 مقایسه Collections
+
+| زبان | Array/List | Map/Dict | Set | Tuple | Queue |
+|------|------------|----------|-----|-------|-------|
+| **Python** | `list` | `dict` | `set` | `tuple` | `deque` |
+| **JavaScript** | `Array` | `Map`/`{}` | `Set` | `[]` | - |
+| **TypeScript** | `T[]` | `Map<K,V>` | `Set<T>` | `[A,B]` | - |
+| **Java** | `List` | `Map` | `Set` | `Pair`/`record` | `Queue` |
+| **C#** | `List<T>` | `Dictionary` | `HashSet` | `(,)` | `Queue<T>` |
+| **C++** | `vector` | `map`/`unordered_map` | `set` | `tuple` | `queue` |
+| **C** | `array` | - | - | `struct` | - |
+| **Go** | `[]T` | `map[K]V` | `map[K]struct{}` | - | `channel` |
+| **Rust** | `Vec<T>` | `HashMap` | `HashSet` | `(,)` | `VecDeque` |
+| **Kotlin** | `List` | `Map` | `Set` | `Pair`/`Triple` | - |
+| **Swift** | `Array` | `Dictionary` | `Set` | `(,)` | - |
+| **Dart** | `List` | `Map` | `Set` | `Record` | - |
+| **Ruby** | `Array` | `Hash` | `Set` | `Array` | - |
+| **PHP** | `array` | `array` | - | - | `SplQueue` |
+| **Scala** | `List`/`Vector` | `Map` | `Set` | `Tuple` | - |
+| **Haskell** | `[]` | `Data.Map` | `Data.Set` | `(,)` | - |
+| **Elixir** | `List` | `Map` | `MapSet` | `{,}` | - |
+| **Erlang** | `list` | `maps` | `sets` | `{,}` | `queue` |
+| **Zig** | `ArrayList` | `HashMap` | - | `.{,}` | - |
+| **Gleam** | `List` | `Dict` | `Set` | `#(,)` | - |
+
+### 6.2 مقایسه نوع‌دهی
+
+| زبان | نوع‌دهی | Null Safety | Generics | Pattern Matching |
+|------|---------|-------------|----------|------------------|
+| **Python** | Dynamic | Optional hints | No | ✅ (3.10+) |
+| **JavaScript** | Dynamic | ❌ | ❌ | ❌ |
+| **TypeScript** | Static (erased) | ✅ | ✅ | ✅ (limited) |
+| **Java** | Static | Optional | ✅ (erased) | ✅ (21+) |
+| **C#** | Static | ✅ (nullable ref) | ✅ (reified) | ✅ |
+| **C++** | Static | Optional | ✅ | ✅ (limited) |
+| **C** | Static | ❌ | ❌ | ❌ |
+| **Go** | Static | ❌ | ✅ (1.18+) | ✅ (type switch) |
+| **Rust** | Static | ✅ (`Option`) | ✅ (monomorphized) | ✅ |
+| **Kotlin** | Static | ✅ | ✅ (erased) | ✅ |
+| **Swift** | Static | ✅ | ✅ | ✅ |
+| **Dart** | Sound static | ✅ | ✅ | ✅ (3+) |
+| **Ruby** | Dynamic | ❌ | ❌ | ✅ (case/in) |
+| **PHP** | Gradual | ❌ | ❌ | ✅ (8+) |
+| **Scala** | Static | ✅ (`Option`) | ✅ | ✅ |
+| **Haskell** | Static | ✅ (`Maybe`) | ✅ | ✅ |
+| **Elixir** | Dynamic | ✅ (`nil`) | ❌ | ✅ |
+| **Erlang** | Dynamic | ❌ | ❌ | ✅ |
+| **Zig** | Static | ✅ (`?T`) | ✅ (comptime) | ✅ |
+| **Carbon** | Static | ✅ (`Optional`) | ✅ | ✅ |
+| **Gleam** | Static | ✅ (`Option`) | ✅ | ✅ |
+
+### 6.3 مقایسه ویژگی‌های خاص
+
+| زبان | Immutable Default | Concurrency Model | Memory Model |
+|------|-------------------|-------------------|--------------|
+| **Python** | ❌ | GIL + threads | GC |
+| **JavaScript** | ❌ | Event loop | GC |
+| **Java** | ❌ | Threads + virtual threads | GC |
+| **C#** | ❌ | Threads + async/await | GC |
+| **C++** | ❌ | Threads | Manual |
+| **C** | ❌ | Threads | Manual |
+| **Go** | ❌ | Goroutines + channels | GC |
+| **Rust** | ❌ (by default) | async + threads | Manual (ownership) |
+| **Kotlin** | ❌ | Coroutines | GC |
+| **Swift** | ❌ | async/await | ARC |
+| **Dart** | ❌ | Isolates + async | GC |
+| **Ruby** | ❌ | Threads + Ractors | GC |
+| **PHP** | ❌ | Process-per-request | GC |
+| **Scala** | ✅ (collections) | Futures + Akka | GC |
+| **Haskell** | ✅ | STM + sparks | GC (lazy) |
+| **Elixir** | ✅ | Actors (BEAM) | GC (per-process) |
+| **Erlang** | ✅ | Actors (BEAM) | GC (per-process) |
+| **Zig** | ❌ | async (removed) | Manual (allocator) |
+| **Carbon** | ❌ | - | - |
+| **Gleam** | ✅ | Actors (BEAM) | GC (per-process) |
+
+---
+
+## 7. جمع‌بندی و توصیه‌ها
+
+### 7.1 انتخاب زبان بر اساس نیاز
+
+| نیاز | زبان پیشنهادی |
+|------|----------------|
+| **سیستمی و عملکرد بالا** | C, C++, Rust, Zig |
+| **وب و frontend** | JavaScript, TypeScript |
+| **Backend عمومی** | Python, Go, Java, C#, Kotlin |
+| **همزمانی بالا** | Erlang, Elixir, Go |
+| **برنامه‌نویسی تابعی خالص** | Haskell, Elixir, Gleam |
+| **موبایل** | Swift (iOS), Kotlin (Android), Dart (Flutter) |
+| **علم داده** | Python, Scala |
+| **امنیت نوع بالا** | Rust, Haskell, TypeScript |
+| **ساده‌گرایی** | Go, Python |
+| **آینده‌نگر** | Carbon, Gleam, Zig |
+
+### 7.2 روندهای مدرن (تا 2026)
+
+1. **Null Safety**: اکثر زبان‌های جدید (Kotlin, Swift, Dart, Rust) null safety را در سطح زبان پیاده کرده‌اند.
+2. **Pattern Matching**: از یک ویژگی niche به یک استاندارد تبدیل شده است.
+3. **Algebraic Data Types**: enumهای غنی (Rust, Swift, Scala) رایج شده‌اند.
+4. **Immutability**: زبان‌های جدید به طور پیش‌فرض immutable هستند.
+5. **Type Inference**: حتی زبان‌های static typing به سمت inference قوی حرکت کرده‌اند.
+6. **Records/Tuples**: افزودن نوع‌های داده‌ای سبک (C# records, Dart records, Java records).
+7. **Gradual Typing**: PHP, Python, JavaScript در حال افزودن type hints هستند.
+
+### 7.3 نکات کلیدی
+
+- **هیچ زبان کاملی وجود ندارد** - هر زبان trade-offهای خاص خود را دارد.
+- **نوع داده مناسب = کد بهتر** - انتخاب نوع داده درست، خوانایی و عملکرد را بهبود می‌دهد.
+- **Immutable داده‌ها = همزمانی آسان‌تر** - در برنامه‌های concurrent.
+- **Type System قوی = باگ کمتر** - بسیاری از خطاها در زمان کامپایل کشف می‌شوند.
+
+---
+
+## منابع و مراجع
+
+- مستندات رسمی هر زبان
+- "Programming Language Pragmatics" - Michael L. Scott
+- "Types and Programming Languages" - Benjamin C. Pierce
+- "Crafting Interpreters" - Robert Nystrom
+- [https://en.wikipedia.org/wiki/Comparison_of_programming_languages](https://en.wikipedia.org/wiki/Comparison_of_programming_languages)
+
+---
+
+> 📝 **توجه:** این راهنما تا سپتامبر 2026 به‌روز شده است. برخی زبان‌ها مانند Carbon همچنان در حال توسعه هستند و ممکن است ویژگی‌های جدیدی اضافه شود.
+
+**پایان سند**
